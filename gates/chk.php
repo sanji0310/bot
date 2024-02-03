@@ -113,8 +113,7 @@ $cvv = isset($separa[3]) ? $separa[3] : '';
 $last4 = substr($cc, -4);
 
 
-$sent_message_id = send_reply($chatId, $message_id, $keyboard, "<b>
-  🔴↯[CHECKING CARD]↯
+$sent_message_id = send_reply($chatId, $message_id, $keyboard, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
 Gateway: STRIPE CHARGE 1€
 Status: <code>□□□□□ 0%[⬜]</code>
@@ -192,8 +191,7 @@ $pass = passwordGen();
 
 
 sleep(1);
-    edit_sent_message($chatId, $sent_message_id, "<b>
-  🔴↯[CHECKING CARD]↯
+    edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
 Gateway: STRIPE CHARGE 1€
 Status: <code>■□□□□ 20%[🟥]</code>
@@ -279,8 +277,7 @@ if($state=="Alabama"){ $state="AL";
 
 //==============[Randomizing Details-END]======================//
 sleep(1);
-    edit_sent_message($chatId, $sent_message_id, "<b>
-  🔴↯[CHECKING CARD]↯
+    edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
 Gateway: STRIPE CHARGE 1€
 Status: <code>■■■□□ 50%[🟧]</code>
@@ -290,8 +287,8 @@ Req: <code>@$username</code>
 
   //==================[BIN LOOK-UP]======================//
 
-  $bin = substr($lista, 0,6);
-  $ch = curl_init();
+$bin = substr($lista, 0,6);
+$ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://lookup.binlist.net/'.$bin.'');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -316,8 +313,7 @@ $type =strtoupper(GetStr($fim, '"type":"', '"'));
 
 
 sleep(1);
-    edit_sent_message($chatId, $sent_message_id, "<b>
- 🔴↯[CHECKING CARD]↯
+    edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
 Gateway: STRIPE CHARGE 1€
 Status: <code>■■■■□ 80%[🟨]</code>
@@ -395,8 +391,7 @@ $result2 = curl_exec($ch);
 
 
 sleep(1);
-    edit_sent_message($chatId, $sent_message_id, "<b>
- 🔴↯[CHECKING CARD]↯
+    edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
 Gateway: STRIPE CHARGE 1€
 Status: <code>■■■■■ 100%[🟩]</code>
@@ -415,12 +410,11 @@ if (
     strpos($result2, '/donations/thank_you?donation_number=') !== false
 ) {
 
-  $resp = "<b>
- [火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 1€ 🌩
 ━━━━━━━━━━━━━
-• ┌CC: <code>$lista</code>
-• ├Status: CCN Charged 🟢
-• └Response: <code>Thank you for your message.</code>
+•┌CC: <code>$lista</code>
+•├Status: CCN Charged 🟢
+•└Response: <code>Thank you for your message.</code>
 
 •├Bank: <code>$bank</code>
 •├Brand: <code>$brand</code>
@@ -442,12 +436,11 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 elseif(strpos($result2, "Your card has insufficient funds.") || strpos($result2, "insufficient_funds")) {
 
 
-$resp = "<b>
- [火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 1€ 🌩
 ━━━━━━━━━━━━━
-• ┌CC: <code>$lista</code>
-• ├Status: Live 🟢
-• └Response: <code>Insufficient funds</code>
+•┌CC: <code>$lista</code>
+•├Status: Live 🟢
+•└Response: <code>Insufficient funds</code>
 
 •├Bank: <code>$bank</code>
 •├Brand: <code>$brand</code>
@@ -468,12 +461,11 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 elseif(strpos($result2, 'security code is incorrect.') !== false || strpos($result2, 'security code is invalid.') !== false || strpos($result2, "incorrect_cvc") !== false) {
-$resp = "<b>
- [火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 1€ 🌩
 ━━━━━━━━━━━━━
-• ┌CC: <code>$lista</code>
-• ├Status: Live 🟢
-• └Response: <code>Incorrect_cvc</code>
+•┌CC: <code>$lista</code>
+•├Status: Live 🟢
+•└Response: <code>Incorrect_cvc</code>
 
 •├Bank: <code>$bank</code>
 •├Brand: <code>$brand</code>
@@ -493,12 +485,11 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "Your card does not support this type of purchase.")) {
-$resp = "<b>
- [火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 1€ 🌩
 ━━━━━━━━━━━━━
-• ┌CC: <code>$lista</code>
-• ├Status: Live 🟢
-• └Response: <code>Your card doesn't support this type of purchase</code>
+•┌CC: <code>$lista</code>
+•├Status: Live 🟢
+•└Response: <code>Your card doesn't support this type of purchase</code>
 
 •├Bank: <code>$bank</code>
 •├Brand: <code>$brand</code>
@@ -518,12 +509,11 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "stripe_3ds2_fingerprint")) {
-$resp = "<b>
- [火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 1€ 🌩
 ━━━━━━━━━━━━━
-• ┌CC: <code>$lista</code>
-• ├Status: Live 🟢
-• └Response: <code>3D_Required</code>
+•┌CC: <code>$lista</code>
+•├Status: Live 🟢
+•└Response: <code>3D_Required</code>
 
 •├Bank: <code>$bank</code>
 •├Brand: <code>$brand</code>
@@ -544,8 +534,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 else {
-$resp = "<b>
- [火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 1€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Dead 🔴
