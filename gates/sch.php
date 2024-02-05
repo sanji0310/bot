@@ -116,7 +116,7 @@ $last4 = substr($cc, -4);
 
 $sent_message_id = send_reply($chatId, $message_id, $keyboard, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 4$
+Gateway: STRIPE CHARGE 10$
 Status: <code>□□□□□ 0%[⬜]</code>
 Req: <code>@$username</code>
 </b>");
@@ -194,7 +194,7 @@ $pass = passwordGen();
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 4$
+Gateway: STRIPE CHARGE 10$
 Status: <code>■□□□□ 20%[🟥]</code>
 Req: <code>@$username</code>
 </b>");
@@ -280,7 +280,7 @@ if($state=="Alabama"){ $state="AL";
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 4$
+Gateway: STRIPE CHARGE 10$
 Status: <code>■■■□□ 50%[🟧]</code>
 Req: <code>@$username</code>
 </b>");
@@ -316,7 +316,7 @@ $type =strtoupper(GetStr($fim, '"type":"', '"'));
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 4$
+Gateway: STRIPE CHARGE 10$
 Status: <code>■■■■□ 80%[🟨]</code>
 Req: <code>@$username</code>
 </b>");
@@ -394,7 +394,7 @@ $result2 = curl_exec($ch);
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 1€
+Gateway: STRIPE CHARGE 10$
 Status: <code>■■■■■ 100%[🟩]</code>
 Req: <code>@$username</code>
 </b>");
@@ -411,7 +411,7 @@ if (
     strpos($result2, '/donations/thank_you?donation_number=') !== false
 ) {
 
-$resp = "<b>[火]Stripe Charge 4$ 🌩
+$resp = "<b>[火]Stripe Charge 10$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: CCN Charged 🟢
@@ -437,7 +437,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 elseif(strpos($result2, "Your card has insufficient funds.") || strpos($result2, "insufficient_funds")) {
 
 
-$resp = "<b>[火]Stripe Charge 4$ 🌩
+$resp = "<b>[火]Stripe Charge 10$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -462,7 +462,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 elseif(strpos($result2, 'security code is incorrect.') !== false || strpos($result2, 'security code is invalid.') !== false || strpos($result2, "incorrect_cvc") !== false) {
-$resp = "<b>[火]Stripe Charge 4$ 🌩
+$resp = "<b>[火]Stripe Charge 10$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -486,7 +486,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "Your card does not support this type of purchase.")) {
-$resp = "<b>[火]Stripe Charge 4$ 🌩
+$resp = "<b>[火]Stripe Charge 10$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -510,7 +510,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "stripe_3ds2_fingerprint")) {
-$resp = "<b>[火]Stripe Charge 4$ 🌩
+$resp = "<b>[火]Stripe Charge 10$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -535,7 +535,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 else {
-$resp = "<b>[火]Stripe Charge 4$ 🌩
+$resp = "<b>[火]Stripe Charge 10$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Dead 🔴
