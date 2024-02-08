@@ -428,7 +428,7 @@ $resp = "<b>[火]Stripe Charge 10$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: CCN Charged 🟢
-•└Response: <code>Thank you for your order.</code>
+•└Response: <code>Thank you for registering.</code>
 
 •├Bank: <code>$bank</code>
 •├Brand: <code>$brand</code>
