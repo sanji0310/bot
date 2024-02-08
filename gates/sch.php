@@ -388,7 +388,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D1075%26
 
 $result2 = curl_exec($ch);
 
-# -------------------- [2 REQ] --------
+# ---------------------------------------#
 
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
