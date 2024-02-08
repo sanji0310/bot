@@ -325,7 +325,7 @@ Req: <code>@$username</code>
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
-curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'POST /v1/payment_methods h2',
