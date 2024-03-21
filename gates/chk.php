@@ -418,7 +418,7 @@ if (
 $resp = "<b>[火]Stripe Charge 10€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
-•├Status: CCN Charged 🟢
+•├Status: CCN Charged 💲✅
 •└Response: <code>Thank you for your message.</code>
 
 •├Bank: <code>$bank</code>
