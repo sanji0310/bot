@@ -231,7 +231,7 @@ $response = "404 error 🚫";
 
 else {
       $status = "Dead 🔴";
-$response = "";
+$response = "Payment Error 🚫";
 
     }
 //--------SMS SENT SECTION----------------//
