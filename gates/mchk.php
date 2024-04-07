@@ -21,8 +21,8 @@ $stchk = "<b>Started Checking...</b>";
     $aray = gibarray($message);
     $cout = count($aray);
     $total = $cout * 2;
-    if (count($aray) > 5){
-  $cmsg = "This Gate Limited To Check For 5 CCs Only.";
+    if (count($aray) > 10){
+  $cmsg = "𝗧𝗛𝗜𝗦 𝗚𝗔𝗧𝗘 𝗜𝗦 𝗟𝗜𝗠𝗜𝗧𝗘𝗗 𝗧𝗢 𝗖𝗛𝗘𝗖𝗞 𝗙𝗢𝗥 𝟭𝟬 𝗖𝗖 𝗢𝗡𝗟𝗬 ⚠️";
   editMessage($chatId,$cmsg,$mes_id);
     exit();
 }
@@ -183,7 +183,7 @@ $response = "Expired Card 🚫";
 
 elseif (strpos($result2a, 'Thank you for your donation. We will get in touch with you shortly')){
   $status = "Live 🟢";
-$response = "Charged 1$";
+$response = "Charged 1$ ✅";
 
   }
 
