@@ -47,7 +47,7 @@ $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
 
-$username = "g7305bhx467p4yl";
+$username = "g7305bhx467p4yl-country-th-city-bangkok";
 $password = "ugv0ew3w009j5ii";
 $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
@@ -89,7 +89,7 @@ $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 # -------------------- [2 REQ] -------------------#
 
-$username = "g7305bhx467p4yl";
+$username = "g7305bhx467p4yl-country-th-city-bangkok";
 $password = "ugv0ew3w009j5ii";
 $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
