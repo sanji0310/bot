@@ -199,7 +199,7 @@ $response = "Expired Card 🚫";
 
 elseif (strpos($result2a, 'Thank you for registering!')){
   $status = "Live 🟢";
-$response = "Charged 25$ ✅";
+$response = "Charged 1$ ✅";
 
   }
 
