@@ -147,7 +147,7 @@ elseif ((strpos($result2a, "INSUFFICIENT FUNDS")) || (strpos($result2a, "insuffi
 $response = "INSUFFICIENT FUNDS ✅";
 
   }
-elseif ((strpos($result2a, "CCN LIVE")) || (strpos($result2a, "incorrect_cvc")) || (strpos($result2a, "security code is incorrect."))){
+elseif ((strpos($result2a, "CCN LIVE")) || (strpos($result2a, "incorrect_cvc")) || (strpos($result2a, 'security code is incorrect.'))){
   $status = "Live 🟡";
 $response = "CCN Live ✅";
 
