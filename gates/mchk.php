@@ -21,7 +21,7 @@ $stchk = "<b>Started Checking...</b>";
     $aray = gibarray($message);
     $cout = count($aray);
     $total = $cout * 0;
-    if (count($aray) > 0){
+    if (count($aray) > 5){
   $cmsg = "𝗧𝗛𝗜𝗦 𝗚𝗔𝗧𝗘 𝗜𝗦 𝗟𝗜𝗠𝗜𝗧𝗘𝗗 𝗧𝗢 𝗖𝗛𝗘𝗖𝗞 𝗙𝗢𝗥 𝟱 𝗖𝗖 𝗢𝗡𝗟𝗬 ⚠️";
   editMessage($chatId,$cmsg,$mes_id);
     exit();
