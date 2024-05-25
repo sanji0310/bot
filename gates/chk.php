@@ -115,7 +115,7 @@ $last4 = substr($cc, -4);
 
 $sent_message_id = send_reply($chatId, $message_id, $keyboard, "<b>🔴↯[CHECKING CARD]↯
 CC: <code>$lista</code>
-Gateway: STRIPE CHARGE 1$
+Gateway: Stripe Auth 🌩
 Status: <code>□□□□□ 0%[⬜]</code>
 Req: <code>@$username</code>
 </b>");
