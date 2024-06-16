@@ -196,7 +196,7 @@ $response = 'Error ⭕');
 
 //--------SMS SENT SECTION----------------//
   global $mes_id, $chatId , $fullmes;
-$mainulstatus = "<b>Dead 🔴</b>";
+$mainulstatus = '<b>Dead 🔴</b>';
 $fullmes = $fullmes.'<b>CC - <code>'.$lista.'</code>
 Result - '.$response.'</b>
 
