@@ -188,12 +188,10 @@ else {
       $status = "Dead 🔴";
 $response = "Payment Error ⭕";
 
-    }
-
 $fullmes = $fullmes.'<b>CC - <code>'.$lista.'</code>
 Result - '.$response.'</b>
 
 ';
 editMessagei($chatId,$fullmes,$mes_id);
-
+}
 }
