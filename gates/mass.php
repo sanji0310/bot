@@ -12,7 +12,7 @@ if (empty($message)){
 reply_to($chatId,$validauth,$message_id);
 exit();
 }
-$stchk = "<b>Started Checking...</b>";
+$stchk = "<b>Started Checking...(5_cc_only)</b>";
     $sendmes = "https://api.telegram.org/bot".$botToken."/sendMessage?chat_id=".$chatId."&text=".$stchk."&reply_to_message_id=".$message_id."&parse_mode=HTML";
     $sent = json_decode(file_get_contents($sendmes) ,1);
     global $mes_id;
