@@ -189,24 +189,11 @@ else {
 $response = "Payment Error ⭕";
 
     }
-//--------SMS SENT SECTION----------------//
-  global $mes_id, $chatId , $fullmes;
-$mainulstatus = "<b>Dead 🔴</b>";
+
 $fullmes = $fullmes.'<b>CC - <code>'.$lista.'</code>
 Result - '.$response.'</b>
 
 ';
-$umass = "<b>𒀭  STRIPE AUTH 1$  𒀭
-   ━━━━━━━━━━━━━</b>
-";
-$fmass = "<b>╭───────────────
-𒆜 PROXY  : [ LIVE & ROTATING ]
-𒆜 BOT BY : <a href='t.me/strawhatchannel69'>[ BE - OWNER  ]</a>
-╰───────────────✘</b>";
-
-$mallmsg = urlencode ("$umass
-$fullmes
-$fmass");
-editMessagei($chatId,$mallmsg,$mes_id);
+editMessagei($chatId,$fullmes,$mes_id);
 
 }
