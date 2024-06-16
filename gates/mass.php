@@ -215,3 +215,6 @@ $fmass");
 editMessagei($chatId,$mallmsg,$mes_id);
 
 }
+
+curl_close($ch);
+?>
