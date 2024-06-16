@@ -121,7 +121,7 @@ $fullmes = $fullmes.'<b>CC - <code>'.$lista.'</code>
 Result - '.$response.'</b>
 
 ';
-$umass = "<b>𒀭  MASS CVV CHARGE 1 $  𒀭
+$umass = "<b>𒀭  STRIPE AUTH 1$  𒀭
    ━━━━━━━━━━━━━</b>
 ";
 $fmass = "<b>╭───────────────
