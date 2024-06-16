@@ -140,6 +140,11 @@ elseif (strpos($result2, "Your card was declined.")){
 $response = "GENERIC DECLINED ⭕";
 }
 
+elseif (strpos($result2, "Your card number is incorrect.")){
+  $status = "Dead 🔴";
+$response = "INCORRECT NUMBER ⭕";
+}
+
 else {
       $status = "Dead 🔴";
 $response = "Payment Error ⭕";
