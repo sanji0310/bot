@@ -113,6 +113,7 @@ $response = "GENERIC DECLINED ⭕";
 else {
       $status = "Dead 🔴";
 $response = "ERROR ❗";
+}
 
 //--------SMS SENT SECTION----------------//
   global $mes_id, $chatId , $fullmes;
