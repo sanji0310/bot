@@ -105,6 +105,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 'sec-fetch-dest: document',
 'accept-language: en-US,en;q=0.9',
   ));
+$result2 = curl_exec($ch);
 sleep(10);
 
 // Response
