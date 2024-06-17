@@ -12,7 +12,7 @@ if (empty($message)){
 reply_to($chatId,$validauth,$message_id);
 exit();
 }
-$stchk = "<b>Started Checking...(5_cc_only)</b>";
+$stchk = "<b>Started Checking [Max 5 CC]</b>";
     $sendmes = "https://api.telegram.org/bot".$botToken."/sendMessage?chat_id=".$chatId."&text=".$stchk."&reply_to_message_id=".$message_id."&parse_mode=HTML";
     $sent = json_decode(file_get_contents($sendmes) ,1);
     global $mes_id;
@@ -107,12 +107,12 @@ $response = "CVV LIVE ✅";
 
 elseif (strpos($result2, "Your card was declined.")){
   $status = "Dead 🔴";
-$response = "GENERIC DECLINED ⭕";
+$response = "GENERIC DECLINED ❌";
 }
 
 else {
       $status = "Dead 🔴";
-$response = "ERROR ❗";
+$response = "PROXY ERROR 🚫";
 }
 
 //--------SMS SENT SECTION----------------//
